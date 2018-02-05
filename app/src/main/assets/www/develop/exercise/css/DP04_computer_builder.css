@@ -1,0 +1,74 @@
+
+.bottomLeft{
+    width : 60px;
+    height : 60px;
+
+    position : absolute;
+    top : 10px;
+
+    left : 25%;
+    animation : 1s fallBottom forwards;
+}
+
+.bottomRight{
+    width : 60px;
+    height : 60px;
+
+    position : absolute;
+    top : 10px;
+
+    left : 65%;
+    animation : 1s fallBottom forwards;
+}
+
+.topLeft{
+    width : 60px;
+    height : 60px;
+
+    position : absolute;
+    top : 10px;
+
+    left : 25%;
+    animation : 1s fallTop forwards;
+}
+
+.topRight{
+    width : 60px;
+    height : 60px;
+
+    position : absolute;
+    top : 10px;
+
+    left : 65%;
+    animation : 1s fallTop forwards;
+}
+
+@keyframes fallTop{
+    from{
+        top : 10px;
+    }
+    to{
+        display : block;
+        top : 20px;
+    }
+}
+
+@keyframes fallBottom{
+    from{
+        top : 10px;
+    }
+    to{
+        top : 120px;
+    }
+}
+
+.integrated{
+    display : none;
+
+    width : 160px;
+    height : 160px;
+
+    position : absolute;
+    top: 10px;
+    left: 30%;
+}

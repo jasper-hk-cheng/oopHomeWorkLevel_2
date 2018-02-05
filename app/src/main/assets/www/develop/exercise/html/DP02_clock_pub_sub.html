@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lib/flipclock.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+
+    <title>ch2 observer pattern pub/sub [clock]</title>
+    <style>
+        .flipClock{
+            margin: 12px 0px;
+
+        }
+        .clockLabel{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row topMargin">
+        <div class="col-xs-6">
+            <button type="button" id="startCounting" class="btn btn-info btn-block">start</button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" id="stopCounting" class="btn btn-info btn-block">stop</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-left">
+            <label for="subjectClock" class="control-label text-capitalize clockLabel text-warning">subject clock</label>
+            <div id="subjectClock" class="flipClock"></div>
+        </div>
+    </div>
+
+    <hr class="separateLine" />
+
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="the1st5sSub" class="control-label text-capitalize clockLabel text-success">subscriber (noticed every 5 seconds)</label>
+        </div>
+        <div class="col-xs-12">
+            <div id="the1st5sSub" class="flipClock"></div>
+        </div>
+        <div class="col-xs-12">
+            <div id="the2nd5sSub" class="flipClock"></div>
+        </div>
+    </div>
+
+    <hr class="separateLine" />
+
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="the1st2sSub" class="control-label text-capitalize clockLabel text-success">subscriber (noticed every 2 seconds)</label>
+        </div>
+        <div class="col-xs-12">
+            <div id="the1st2sSub" class="flipClock"></div>
+        </div>
+        <div class="col-xs-12">
+            <div id="the2nd2sSub" class="flipClock"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/flipclock.min.js"></script>
+<script type="text/javascript" src="../js/DP02_clock_pub_sub.js"></script>
+
+</html>

@@ -1,0 +1,31 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ banks and its inheritance diagram ~~
+
+interface bank{
+    {abstract} +checkCreditCardNo(creditCard)
+}
+
+class taiShinBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. taiShinBank
+
+class cathayBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. cathayBank
+
+class ctbcBank{
+    +checkCreditCardNo(creditCard)
+}
+ctbcBank ..|> bank
+
+class ncccBank{
+    +checkCreditCardNo(creditCard)
+}
+ncccBank ..|> bank
+
+@enduml

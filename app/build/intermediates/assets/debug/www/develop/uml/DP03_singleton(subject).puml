@@ -1,0 +1,23 @@
+
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ singleton class diagram for true/false test only ~~
+
+class Singleton{
+
+}
+Singleton : -instance
+Singleton : -Singleton()
+Singleton : +getInstance()
+
+note right of Singleton
+private static final Singleton INSTANCE = new Singleton();
+private Singleton(){}
+public static Singleton getInstance(){
+    return INSTANCE;
+}
+end note
+
+@enduml

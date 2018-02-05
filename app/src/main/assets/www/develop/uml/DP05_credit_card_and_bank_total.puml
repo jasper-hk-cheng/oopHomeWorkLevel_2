@@ -1,0 +1,66 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ banks and credit cards summary ~~
+
+
+
+interface bank{
+    {abstract} +checkCreditCardNo(creditCard)
+}
+
+class taiShinBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. taiShinBank
+
+class cathayBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. cathayBank
+
+class ctbcBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. ctbcBank
+
+class ncccBank{
+    +checkCreditCardNo(creditCard)
+}
+bank <|.. ncccBank
+
+interface creditCard{
+    {abstract} +getBankName()
+    {abstract} +getCardNo()
+}
+
+class taiShinCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+taiShinCreditCard ..|> creditCard
+taiShinCreditCard <--o taiShinBank : check credit card no <
+
+class cathayCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+cathayCreditCard ..|> creditCard
+cathayCreditCard <--o cathayBank : check credit card no <
+
+class ctbcCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+ctbcCreditCard ..|> creditCard
+ctbcCreditCard <--o ctbcBank : check credit card no <
+
+class ncccCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+ncccCreditCard ..|> creditCard
+ncccCreditCard <--o ncccBank : check credit card no <
+
+@enduml

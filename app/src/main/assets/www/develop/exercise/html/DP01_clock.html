@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lib/flipclock.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+
+    <title>ch1 observer pattern [clock]</title>
+    <style>
+        .flipClock{
+            margin: 12px 0px;
+
+        }
+        .clockLabel{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container plant300">
+    <div class="row topMargin">
+        <div class="col-xs-6">
+            <button type="button" id="startCounting" class="btn btn-info btn-block">start</button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" id="stopCounting" class="btn btn-info btn-block">stop</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-left">
+            <label for="subjectClock" class="control-label text-capitalize clockLabel text-warning">subject clock</label>
+            <div id="subjectClock" class="flipClock"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-left">
+            <label for="the1stObserverClock" class="control-label text-capitalize clockLabel text-success">1st observer clock</label>
+            <div id="the1stObserverClock" class="flipClock"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-left">
+            <label for="the2ndObserverClock" class="control-label text-capitalize clockLabel text-success">2nd observer clock</label>
+            <div id="the2ndObserverClock" class="flipClock"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/flipclock.min.js"></script>
+<script type="text/javascript" src="../js/DP01_clock.js"></script>
+
+</html>

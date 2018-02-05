@@ -1,0 +1,127 @@
+[
+    {
+        "id": "1",
+        "subTitle": "Singleton 模式要解決的問題是??",
+        "subDesc": [
+            {
+                "id": "1",
+                "subject": "類別如何與建立實體的方法無關。",
+                "answer": "N",
+                "comment": "singleton跟此議題無關。"
+            },
+            {
+                "id": "2",
+                "subject": "類別如何延遲初始化(Lazy initialization)??",
+                "answer": "N",
+                "comment": "有使用到此情境，但並非singleton的主要目的。"
+            },
+            {
+                "id": "3",
+                "subject": "如何確保類別只有一個實體??",
+                "answer": "Y",
+                "comment": "確為singleton本意。"
+            },
+            {
+                "id": "4",
+                "subject": "如何確保類別只有兩個實體??",
+                "answer": "N",
+                "comment": "應為保有一個實體。"
+            },
+            {
+                "id": "5",
+                "subject": "如何限制類別的實體數目??",
+                "answer": "Y",
+                "comment": "正確，限制為一個實體的情況。"
+            },
+            {
+                "id": "6",
+                "subject": "如何建立大量不需要的物件??",
+                "answer": "N",
+                "comment": "singleton跟此議題無關。"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "subTitle": "Singleton 模式所描述的解決方法??",
+        "subDesc": [
+            {
+                "id": "7",
+                "title": "B",
+                "subject": "建立一個類別，讓它自己負責只建立一個實體。",
+                "answer": "Y",
+                "comment": "正確，採用讓建構子private的機制讓它自己負責建立實體。"
+            },
+            {
+                "id": "8",
+                "title": "B",
+                "subject": "為類別的實體提供一個公開的存取介面。",
+                "answer": "Y",
+                "comment": "但此介面並非java的interface，而是存取方式的統稱。"
+            },
+            {
+                "id": "9",
+                "title": "B",
+                "subject": "讓類別的建構函式為 public。",
+                "answer": "N",
+                "comment": "應為private。"
+            },
+            {
+                "id": "10",
+                "title": "B",
+                "subject": "將類別建立實體的責任委託給子類別。",
+                "answer": "N",
+                "comment": "不見得有此必要，此為 trivial solution。"
+            },
+            {
+                "id": "11",
+                "title": "B",
+                "subject": "為類別的實體提供一個靜態存取方法。",
+                "answer": "Y",
+                "comment": "正確，確保連存取介面都是唯一的。"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "subTitle": "考慮此UML圖形，以下那些敘述是正確的??(點此看圖)",
+        "umlDialogUrl":"../../img/DP03/singleton(subject).png",
+        "subDesc": [
+            {
+                "id": "12",
+                "title": "C",
+                "subject": "Singleton 類別定義了一個常數 INSTANCE，用來儲存類別的實體。",
+                "answer": "Y",
+                "comment": "正確。without a doubt."
+            },
+            {
+                "id": "13",
+                "title": "C",
+                "subject": "Singleton 類別將建構函式隱藏起來。",
+                "answer": "Y",
+                "comment": "正確。without a doubt."
+            },
+            {
+                "id": "14",
+                "title": "C",
+                "subject": "將建構函式隱藏起來，可以確保類別的實體只會被產生一次。",
+                "answer": "Y",
+                "comment": "正確。without a doubt."
+            },
+            {
+                "id": "15",
+                "title": "C",
+                "subject": "將建構函式隱藏起來，可以確保類別無法被繼承。",
+                "answer": "N",
+                "comment": "in terms of java, 不成立。"
+            },
+            {
+                "id": "16",
+                "title": "C",
+                "subject": "Singleton 類別定義了一個公開的靜態方法，回傳類別的實體。",
+                "answer": "Y",
+                "comment": "正確。without a doubt."
+            }
+        ]
+    }
+]

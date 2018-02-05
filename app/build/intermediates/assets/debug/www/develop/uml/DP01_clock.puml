@@ -1,0 +1,27 @@
+
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ clock and its observer ~~
+
+class subjectClock{
+    -allTheObserver[];
+    +registerObserver()
+    -onTick()
+}
+
+class the1stObserverClock{
+    +setSubject()
+    +setTime()
+}
+
+class the2ndObserverClock{
+    +setSubject()
+    +setTime()
+}
+
+the1stObserverClock "observer" <--o "subject" subjectClock : register observer >
+subjectClock "subject" o--> "observer" the2ndObserverClock : register observer >
+
+@enduml

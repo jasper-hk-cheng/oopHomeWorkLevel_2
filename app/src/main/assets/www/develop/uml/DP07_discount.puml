@@ -1,0 +1,59 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ discount calculation model structure ~~
+
+class purchaser{
+    -order[]
+    +addOrder(produce)
+    -strategyMap
+    +putStrategyMap(strategy)
+    +analysis()
+}
+
+class produce{
+    -name
+    -price
+    +getName()
+    +getPrice()
+}
+
+produce "*" <--o "1" purchaser : the produce is \n the element of \n purchaser's \n order <
+
+interface strategyInterface{
+    +{abstract}getResult(order)
+
+    .. for animation only ..
+
+    +showWinnerInfo()
+    +log(text)
+}
+
+note top of strategyInterface
+strategyInterface
+has two default
+method of interface
+end note
+
+purchaser "1" o-> "*" strategyInterface : purchaser needs more \n than one strategyInterface \n to differentiate them;
+class rebateIn1000Strategy{
+    -name
+    -label
+    +getResult(order)
+}
+
+purchaser "1" o--> "1" rebateIn1000Strategy : purchaser only \n needs one \n instance
+
+class percent20Strategy{
+    -name
+    -label
+    +getResult(order)
+}
+
+purchaser "1" o--> "1" percent20Strategy : purchaser only \n needs one \n instance
+
+strategyInterface <|.. rebateIn1000Strategy
+strategyInterface <|.. percent20Strategy
+
+@enduml

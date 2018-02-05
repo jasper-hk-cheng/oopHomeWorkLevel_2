@@ -1,0 +1,53 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ director and builder's inheritance ~~
+
+interface builder{
+    {abstract} +makeMonitor(monitorId)
+    {abstract} +makeMouse(mouseId)
+    {abstract} +makeDesktop(desktopId)
+    {abstract} +makeKeyboard(keyboardId)
+    {abstract} +getComputer()
+}
+
+class director{
+    -builder
+    +construct(monitorId, mouseId, desktopId, keyboardId)
+}
+director "1" o--> "1" builder : director asks \n the builder \n to build \n something >
+
+class builder01{
+    -computerId
+    -buildList[]
+    --
+    +makeMonitor(monitorId)
+    +makeMouse(mouseId)
+    +makeDesktop(desktopId)
+    +makeKeyboard(keyboardId)
+    +getComputer()
+
+    .. for animation only ..
+
+    -appearOrder
+}
+builder <|-- builder01
+
+class builder02{
+    -computerId
+    -buildList[]
+    --
+    +makeMonitor(monitorId)
+    +makeMouse(mouseId)
+    +makeDesktop(desktopId)
+    +makeKeyboard(keyboardId)
+    +getComputer()
+
+    .. for animation only ..
+
+    -appearOrder
+}
+builder <|-- builder02
+
+@enduml

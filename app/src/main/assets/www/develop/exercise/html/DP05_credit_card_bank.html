@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/DP05_credit_card_bank.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row topMargin">
+        <div class="col-xs-4 text-center">
+            <div id="cathayBank">
+                <label class="control-label">cathay bank</label>
+                <img src="../../img/DP05/cathayBank.png"/>
+            </div>
+        </div>
+        <div class="col-xs-offset-4 col-xs-4 text-center">
+            <div id="taishinBank">
+                <label class="control-label">tai shin bank</label>
+                <img src="../../img/DP05/taishinBank.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-4 col-xs-4 text-center">
+            <div id="creditModule">
+                <label class="control-label">module</label>
+                <img src="../../img/DP05/creditModule.png" />
+            </div>
+            <div class="dotGroup">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 text-center">
+            <div id="ctbcBank">
+                <label class="control-label">ctbc bank</label>
+                <img src="../../img/DP05/ctbcBank.png"/>
+            </div>
+        </div>
+        <div class="col-xs-offset-4 col-xs-4 text-center">
+            <div id="nccc">
+                <label class="control-label">nccc bank</label>
+                <img src="../../img/DP05/nccc.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row topMargin">
+        <div class="col-xs-12">
+            <hr class="separateLine" />
+        </div>
+    </div>
+
+    <div class="row form-inline">
+        <div class="col-xs-7">
+            <label for="creditCardNo" class="control-label text-danger">key in card number:</label>
+            <input type="number" id="creditCardNo" class="form-control" />
+        </div>
+        <div class="col-xs-5 text-left text-success" id="message"></div>
+    </div>
+
+    <div class="row topMargin">
+        <div class="col-xs-12">
+            <hr class="separateLine" />
+        </div>
+    </div>
+
+    <div class="row topMargin">
+        <div class="col-xs-3">
+            <button type="button" id="btnCathayBank" class="btn btn-info">Cathay</button>
+        </div>
+        <div class="col-xs-3">
+            <button type="button" id="btnTaiShinBank" class="btn btn-info">TaiShin</button>
+        </div>
+        <div class="col-xs-3">
+            <button type="button" id="btnCtbcBank" class="btn btn-info">CTBC</button>
+        </div>
+        <div class="col-xs-3">
+            <button type="button" id="btnNccc" class="btn btn-info">NCCC</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/utils/oopUtils.js"></script>
+<script type="text/javascript" src="../js/DP05_credit_card_bank.js"></script>
+
+</html>

@@ -1,0 +1,51 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ clock, topic the clock owns and their subscriber ~~
+
+class subjectClock{
+    -topicPer5s
+    -topicPer2s
+
+    -onTick(time)
+    +start()
+    +stop()
+    +setTime(time)
+}
+
+class topicPer5s{
+    +fire(time)
+}
+subjectClock "subject" o-> "topic" topicPer5s : trigger to publish >
+
+class topicPer2s{
+    +fire(time)
+}
+topicPer2s "topic" <-o "subject" subjectClock : trigger to publish <
+
+class the1st5sSub{
+    +updateTime(time)
+    -setTime(time)
+}
+topicPer5s "topic" o--> "subscriber" the1st5sSub : publish the infor. >
+
+class the2nd5sSub{
+    +updateTime(time)
+    -setTime(time)
+}
+topicPer5s "topic" o--> "subscriber" the2nd5sSub : publish the infor. >
+
+class the1st2sSub{
+    +updateTime(time)
+    -setTime(time)
+}
+topicPer2s "topic" o--> "subscriber" the1st2sSub : publish the infor. >
+
+class the2nd2sSub{
+    +updateTime(time)
+    -setTime(time)
+}
+topicPer2s "topic" o--> "subscriber" the2nd2sSub : publish the infor. >
+
+@enduml

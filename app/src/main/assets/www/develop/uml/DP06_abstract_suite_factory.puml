@@ -1,0 +1,38 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ abstract factory and its inheritance diagram ~~
+
+abstract class abstractFactory{
+    +getFactory(clazzName)
+
+    .. abstract method below ..
+
+    {abstract} +createHat(name, defense)
+    {abstract} +createHelmet(name, defence)
+    {abstract} +createArmor(name, thick, defence)
+    {abstract} +createBoot(name, speed)
+    {abstract} +createWeapon(name, speed, attack, defence)
+}
+
+class pokemonFactory{
+    +createHat(name, defense)
+    +createHelmet(name, defence)
+    +createArmor(name, thick, defence)
+    +createBoot(name, speed)
+    +createWeapon(name, speed, attack, defence)
+}
+abstractFactory <|--  pokemonFactory : implement the abstract \n method to produce \n the real suite
+
+class warCraftFactory{
+    +createHat(name, defense)
+    +createHelmet(name, defence)
+    +createArmor(name, thick, defence)
+    +createBoot(name, speed)
+    +createWeapon(name, speed, attack, defence)
+}
+warCraftFactory --|>  abstractFactory : implement the abstract \n method to produce \n the real suite
+
+@enduml
+

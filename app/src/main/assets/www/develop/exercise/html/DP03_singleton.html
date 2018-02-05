@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/DP03_singleton.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <div id="subNoList">
+
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div id="subTitle">
+                <span id="subTitleContent" data-sub-no-id="">
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="subDescList" class="list-group">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="answerList" class="tab-content answerList">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="umlDiagramModal" class="modal fade" tabindex="-1" role="dialog" style="display:none;">
+    <div class="modal-dialog modal-xs" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="umlDialog" src="" style="width:100%; height:100%;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/jquery.loadTemplate.min.js"></script>
+<script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/DP03_singleton.js"></script>
+
+<script type="text/html" id="subNoTemplate">
+    <button class="subNoBtn" data-id="id">第<span data-content="id"></span>題</button>
+</script>
+
+<script type="text/html" id="subDescTemplate">
+    <a class="list-group-item subDesc" data-href="hash" data-content="subject"></a>
+</script>
+
+<script type="text/html" id="answerTemplate">
+    <div class="tab-pane paneCustom" data-id="paneId">
+        <div class="row">
+            <div class="col-xs-2 answerIcon">
+                <span data-class="iconClazz"></span>
+            </div>
+            <div class="col-xs-10 answerComment">
+                <span data-content="comment" class="ansCommentContent"></span>
+            </div>
+        </div>
+    </div>
+</script>
+
+</html>

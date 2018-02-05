@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <!--<meta name="msapplication-tap-highlight" content="no">-->
+
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>design pattern note app</title>
+    <style>
+        .goBack{
+            margin-top: 15px;
+            margin-bottom: 0px;
+
+            padding: 10px 10px;
+
+            background-color: white;
+            border-radius: 20px;
+            color: #CA7A2C;
+
+            border-style: solid;
+            border-color: #ddd;
+            border-width: 1px;
+        }
+        .exercise{
+            height: 520px;
+            width: 100%;
+            border-style: none;
+            overflow: hidden;
+        }
+        .imgStyle{
+            width: 70px;
+            height: 70px;
+        }
+        .badgeStyle{
+            background: #F19483;
+        }
+        .lessonListTitle{
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            margin-top: 10px;
+
+            font-weight: bolder;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+        .lessonListContent{
+            position: absolute;
+            top: 25px;
+            left: 100px;
+            margin-top: 10px;
+
+            width: 60%;
+            height: 60px;
+        }
+        // style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"
+    </style>
+</head>
+<body>
+
+<div class="container" style="height: 100%;">
+
+    <!--page1 main list-->
+    <div id="lessonListBlock" class="row" style="padding-top:15px;">
+        <div class="col-xs-12">
+            <ul id="lessonList" class="list-group">
+                <!--<li class="list-group-item active">item01</li>-->
+            </ul>
+        </div>
+    </div>
+
+    <!--page2 example and uml diagram tabs-->
+    <div id="lessonContentBlock" class="row form-group" style="display:none; ">
+        <div class="col-xs-2">
+            <span id="backToLessonList" class="glyphicon glyphicon-chevron-left goBack"></span>
+        </div>
+        <div class="col-xs-10">
+            <ul id="tabContainer" class="nav nav-tabs" style="margin-top:15px;">
+                <li><a href="#exerciseBlock">exercise</a></li>
+                <li><a href="#umlListBlock">uml list</a></li>
+                <li><a href="#umlCanvasBlock">canvas</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12">
+            <!--show example-->
+            <div id="exerciseBlock" style="display:none;">
+                <iframe id="exercise" src="" class="exercise"></iframe>
+            </div>
+
+            <!--select a uml to show-->
+            <div id="umlListBlock" style="display:none; padding-top:15px;">
+                <ul id="umlList" class="list-group">
+                    <!--<li class="list-group-item active"></li>-->
+                </ul>
+            </div>
+
+            <!--show the uml diagram the engine drew-->
+            <div id="umlCanvasBlock" style="display:none; padding-top:15px;">
+                <label for="umlCanvas" id="umlLabel" class="control-label"></label>
+                <!--uml draw here-->
+                <img id="umlCanvas" src="" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery.loadTemplate.min.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib/hammer.min.js"></script>
+<script type="text/javascript" src="js/lib/rawdeflate.js"></script>
+
+<script type="text/javascript" src="js/utils/globalConstUtils.js"></script>
+<script type="text/javascript" src="js/utils/lessonUtils.js"></script>
+<script type="text/javascript" src="js/utils/hammerUtils.js"></script>
+<script type="text/javascript" src="js/utils/umlDrawUtils.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+
+<!--active-->
+<script type="text/html" id="lessonListTemplate">
+    <li class="list-group-item">
+        <span>
+            <img class="imgStyle" src="" />
+        </span>
+        <div class="pull-right h4">
+            <span class="badge badgeStyle" data-content-text="diagramAmount"></span>
+        </div>
+        <div data-content-text="title" class="text-nowrap text-warning lessonListTitle"></div>
+        <div data-content-text="comment" class="text-info lessonListContent"></div>
+
+        <input type="hidden" name="lessonId" data-value="lessonId"/>
+    </li>
+</script>
+
+</html>

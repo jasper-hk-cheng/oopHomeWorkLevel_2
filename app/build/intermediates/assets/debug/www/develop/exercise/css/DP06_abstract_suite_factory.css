@@ -1,0 +1,116 @@
+
+.factory{
+    width : 50px;
+    height : 50px;
+
+    margin-top: 15px;
+}
+
+.production{
+    animation-duration : 1s;
+    animation-fill-mode : forwards;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+@keyframes toTopLeft{
+    from{
+        width : 5px;
+        height: 5px;
+    }
+    to{
+        position: absolute;
+        top: 30px;
+        left: 15%;
+
+        width : 40px;
+        height: 40px;
+    }
+}
+
+@keyframes toTopRight{
+    from{
+        width : 5px;
+        height: 5px;
+    }
+    to{
+        position: absolute;
+        top: 30px;
+        left: 50%;
+
+        width : 40px;
+        height: 40px;
+    }
+}
+
+@keyframes toBottomLeft{
+    from{
+        width : 5px;
+        height: 5px;
+    }
+    to{
+        position: absolute;
+        top: 30px;
+        left: 0%;
+
+        width : 40px;
+        height: 40px;
+    }
+}
+
+@keyframes toBottomMiddle{
+    from{
+        width : 5px;
+        height: 5px;
+    }
+    to{
+        position: absolute;
+        top: 30px;
+        left: 40%;
+
+        width : 40px;
+        height: 40px;
+    }
+}
+
+@keyframes toBottomRight{
+    from{
+        width : 5px;
+        height: 5px;
+    }
+    to{
+        position: absolute;
+        top: 30px;
+        left: 75%;
+
+        width : 40px;
+        height: 40px;
+    }
+}
+
+.topLabelAdjust{
+    position: relative;
+    top: 70px;
+    left: -5%;
+}
+
+.bottomLabelAdjust{
+    position: relative;
+    top: 70px;
+    left: 0%;
+}
+
+.suite-name-label{
+    font-size: 90%;
+    color: #28a745;
+    text-decoration: underline;
+}
+
+.suite-label{
+    font-size: 75%;
+    color: #6c757d;
+    margin-bottom: 1px;
+    line-height: 10px;
+}

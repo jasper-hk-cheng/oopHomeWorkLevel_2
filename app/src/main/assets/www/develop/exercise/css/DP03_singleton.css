@@ -1,0 +1,86 @@
+
+#subNoList{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:10px;
+    margin-left: 0px;
+}
+
+.subNoBtn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 10%;
+    background-color: white;
+
+    color: #5bc0de;
+    padding: 3px 10px;
+    margin: 2px 0px;
+}
+
+div#subTitle{
+    height : 110px;
+    line-height : 110px;
+}
+div#subTitle > span#subTitleContent {
+    display : inline-block;
+    line-height : 150%;
+    vertical-align : middle;
+
+    font-size : 18px;
+    font-weight : lighter;
+
+    color: #8a6d3b;
+}
+
+div#subDescList{
+    overflow : auto;
+}
+
+#subDescList .active{
+    background-color: #FFFFFB;
+    color: #3c763d;
+
+    border-color: #3c763d;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+.subDesc{
+    padding: 6px;
+    font-size : 14px;
+}
+
+.paneCustom{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+    border-width: 2px;
+    border-style: dotted;
+    border-color: #ddd;
+
+    padding : 8px;
+}
+
+.answerIcon{
+    font-size : 40px;
+}
+.iconX{
+    color : #B55D4C;
+}
+.iconO{
+    color : #89916B;
+}
+
+.answerComment{
+    height : 100%;
+    line-height : 100%;
+}
+.ansCommentContent{
+    display: inline-block;
+    line-height: 150%;
+    vertical-align: middle;
+
+    font-size: 20px;
+}

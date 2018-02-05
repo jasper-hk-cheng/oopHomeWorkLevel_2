@@ -1,0 +1,88 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ suite and its inheritance diagram ~~
+
+abstract class abstractSuite{
+    -name
+    {abstract} +createDesc()
+}
+
+class pokemonHat{
+    -name
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonHat
+
+class pokemonHelmet{
+    -name
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonHelmet
+
+class pokemonArmor{
+    -name
+    -thick
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonArmor
+
+class pokemonBoot{
+    -name
+    -speed
+    +createDesc()
+}
+abstractSuite <|-- pokemonBoot
+
+class pokemonWeapon{
+    -name
+    -speed
+    -attack
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonWeapon
+
+class warCraftHat{
+    -name
+    -defense
+    +createDesc()
+}
+warCraftHat --|> abstractSuite
+
+class warCraftHelmet{
+    -name
+    -defense
+    +createDesc()
+}
+warCraftHelmet --|> abstractSuite
+
+class warCraftArmor{
+    -name
+    -thick
+    -defense
+    +createDesc()
+}
+warCraftArmor --|> abstractSuite
+
+class warCraftBoot{
+    -name
+    -speed
+    +createDesc()
+}
+warCraftBoot --|> abstractSuite
+
+class warCraftWeapon{
+    -name
+    -speed
+    -attack
+    -defense
+    +createDesc()
+}
+warCraftWeapon --|> abstractSuite
+
+@enduml;

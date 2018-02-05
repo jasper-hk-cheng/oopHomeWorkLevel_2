@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="createUmlDrawTable">
+        create table umlDraw(
+            _id integer primary key autoincrement not null,
+            file_name varchar not null,
+            file_byte blob not null,
+            desc varchar
+        )
+    </string>
+
+    <string name="col_label_file_name">file_name</string>
+    <string name="col_label_file_byte">file_byte</string>
+    <string name="col_label_desc">desc</string>
+
+    <string name="getByteByFileName">
+        select file_byte
+        from umlDraw
+        where 1=1
+        and file_name = ?
+    </string>
+
+</resources>

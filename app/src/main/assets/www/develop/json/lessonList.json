@@ -1,0 +1,110 @@
+[
+    {
+        "lessonId": 1,
+        "imgSrc": "DP01/alarmClock.png",
+        "title": "observer",
+        "comment": "observe what we are care of ...",
+        "hkUrl": "exercise/html/DP01_clock.html",
+        "umlList":[
+            {
+                "label": "clock and its observer",
+                "fileName": "DP01_clock.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 2,
+        "imgSrc": "DP02/circularClock.png",
+        "title": "observer - topic",
+        "comment": "publish -> topic -> subscribe",
+        "hkUrl": "exercise/html/DP02_clock_pub_sub.html",
+        "umlList":[
+            {
+                "label": "clock, topic the clock owns and their subscriber",
+                "fileName": "DP02_clock_pub_sub.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 3,
+        "imgSrc": "DP03/singleSpeaker.png",
+        "title": "singleton",
+        "comment": "lonely singleton, endless sadness...",
+        "hkUrl": "exercise/html/DP03_singleton.html",
+        "umlList":[
+            {
+                "label": "singleton class diagram for true/false test only",
+                "fileName": "DP03_singleton(subject).puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 4,
+        "imgSrc": "DP04/computer01.png",
+        "title": "builder",
+        "comment": "a story about director, builder and love...",
+        "hkUrl": "exercise/html/DP04_computer_builder.html",
+        "umlList":[
+            {
+                "label": "director and builder's inheritance",
+                "fileName": "DP04_builder_director.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 5,
+        "imgSrc": "DP05/nccc.png",
+        "title": "factory method",
+        "comment": "diabolical credit card, diabolical desire...",
+        "hkUrl": "exercise/html/DP05_credit_card_bank.html",
+        "umlList":[
+            {
+                "label": "banks and its inheritance diagram",
+                "fileName": "DP05_bank.puml"
+            },
+            {
+                "label": "credit cards and its inheritance diagram",
+                "fileName": "DP05_credit_card.puml"
+            },
+            {
+                "label": "banks and credit cards summary",
+                "fileName": "DP05_credit_card_and_bank_total.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 6,
+        "imgSrc": "DP06/pokemonFactory.png",
+        "title": "abstract factory",
+        "comment": "the suite war between pokemon and war craft",
+        "hkUrl": "exercise/html/DP06_abstract_suite_factory.html",
+        "umlList":[
+            {
+                "label": "abstract factory and its inheritance diagram",
+                "fileName": "DP06_abstract_suite_factory.puml"
+            },
+            {
+                "label": "suite and its inheritance diagram",
+                "fileName": "DP06_abstract_suite.puml"
+            },
+            {
+                "label": "abstract factory and suite summary",
+                "fileName": "DP06_abstract_factory_and_suite_total.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 7,
+        "imgSrc": "DP07/betterMedal.png",
+        "title": "strategy",
+        "comment": "the same algorithm, different implementation...",
+        "hkUrl": "exercise/html/DP07_discount.html",
+        "umlList":[
+            {
+                "label": "discount calculation model structure",
+                "fileName": "DP07_discount.puml"
+            }
+        ]
+    }
+]
+

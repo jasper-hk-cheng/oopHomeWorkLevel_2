@@ -1,0 +1,130 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ abstract factory and suite summary ~~
+
+abstract class abstractFactory{
+    +getFactory(clazzName)
+
+    .. abstract method below ..
+
+    {abstract} +createHat(name, defense)
+    {abstract} +createHelmet(name, defence)
+    {abstract} +createArmor(name, thick, defence)
+    {abstract} +createBoot(name, speed)
+    {abstract} +createWeapon(name, speed, attack, defence)
+}
+
+class pokemonFactory{
+    +createHat(name, defense)
+    +createHelmet(name, defence)
+    +createArmor(name, thick, defence)
+    +createBoot(name, speed)
+    +createWeapon(name, speed, attack, defence)
+}
+abstractFactory <|-  pokemonFactory
+
+class warCraftFactory{
+    +createHat(name, defense)
+    +createHelmet(name, defence)
+    +createArmor(name, thick, defence)
+    +createBoot(name, speed)
+    +createWeapon(name, speed, attack, defence)
+}
+warCraftFactory -|> abstractFactory
+
+abstract class abstractSuite{
+    -name
+    {abstract} +createDesc()
+}
+
+class pokemonHat{
+    -name
+    -defense
+    +createDesc()
+}
+abstractSuite <|- pokemonHat
+pokemonFactory *--> pokemonHat
+
+class pokemonHelmet{
+    -name
+    -defense
+    +createDesc()
+}
+abstractSuite <|- pokemonHelmet
+pokemonFactory *--> pokemonHelmet
+
+class pokemonArmor{
+    -name
+    -thick
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonArmor
+pokemonFactory *--> pokemonArmor
+
+class pokemonBoot{
+    -name
+    -speed
+    +createDesc()
+}
+abstractSuite <|-- pokemonBoot
+pokemonFactory *--> pokemonBoot
+
+class pokemonWeapon{
+    -name
+    -speed
+    -attack
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- pokemonWeapon
+pokemonFactory *--> pokemonWeapon
+
+
+
+class warCraftHat{
+    -name
+    -defense
+    +createDesc()
+}
+abstractSuite <|- warCraftHat
+warCraftFactory *--> warCraftHat
+
+class warCraftHelmet{
+    -name
+    -defense
+    +createDesc()
+}
+warCraftHelmet -|> abstractSuite
+warCraftFactory *--> warCraftHelmet
+
+class warCraftArmor{
+    -name
+    -thick
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- warCraftArmor
+warCraftFactory *--> warCraftArmor
+
+class warCraftBoot{
+    -name
+    -speed
+    +createDesc()
+}
+abstractSuite <|-- warCraftBoot
+warCraftFactory *--> warCraftBoot
+
+class warCraftWeapon{
+    -name
+    -speed
+    -attack
+    -defense
+    +createDesc()
+}
+abstractSuite <|-- warCraftWeapon
+warCraftFactory *--> warCraftWeapon
+
+@enduml

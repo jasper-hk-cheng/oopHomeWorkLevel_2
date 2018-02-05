@@ -1,0 +1,53 @@
+@startuml(id=commonStyle)
+
+'skinparam monochrome true
+'skinparam handwritten true
+skinparam defaultFontName Georgia
+skinparam backgroundColor #FCFAF2/#FFFFFB
+
+skinparam class{
+    backgroundColor #FFFFFB
+    borderColor #0F4C3A
+}
+
+skinparam stereoTypeCBackgroundColor #B5CAA0
+
+skinparam classFont{
+    Color #255359
+    Size 17
+    style bold italic
+}
+
+skinparam classAttribute{
+    fontColor #1C1C1C
+    fontSize 17
+    iconSize 12
+}
+
+skinparam classArrow{
+    color #BA9132
+
+    fontColor #EB7A77
+    fontSize 17
+}
+
+skinparam note{
+    backgroundcolor #FCFAF2/#FFFFFB
+    borderColor #B68E55
+}
+
+skinparam noteFont{
+    color #787878
+    size 14
+    style italic bold
+    name DFKai-SB
+}
+
+skinparam captionFont{
+    color #405B55
+    size 22
+    style bold
+    name Georgia
+}
+
+@enduml

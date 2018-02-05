@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="app_name">HelloCordova</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--for PUmlContentSender (url)-->
+    <string name="draw_p_uml_url">http://www.plantuml.com/plantuml/img/</string>
+
+    <!--for CordovaPlugin (return to web view)-->
+    <string name="return_code">retCode</string>
+    <string name="return_code_no_data_yet">E01</string>
+    <string name="return_code_text_deflate">E02</string>
+    <string name="return_code_regular_data">S01</string>
+    <string name="return_message">retMsg</string>
+    <string name="return_data">retData</string>
+
+    <!--for identification of the file mimeType-->
+    <string name="content_type">contentType</string>
+    <string name="file_name">fileName</string>
+
+    <!--for CordovaActivity (asset manager)-->
+    <string name="p_uml_file_dir">www/develop/uml/</string>
+    <string name="p_uml_style_temp">www/develop/uml/util</string>
+
+    <!--for handler -->
+    <string name="handler_into_db">0001</string>
+
+</resources>

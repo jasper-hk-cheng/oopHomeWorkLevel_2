@@ -1,0 +1,109 @@
+
+.dotGroup > div{
+    background: #CA7A2C;
+    border-radius : 2.5px;
+}
+
+#creditModule > img{
+    width : 50px;
+    height : 50px;
+}
+#cathayBank > img{
+    width: 50px;
+    height: 50px;
+}
+#taishinBank > img{
+     width : 50px;
+     height : 50px;
+}
+#ctbcBank > img{
+    width : 50px;
+    height : 50px;
+}
+#nccc > img{
+    width : 50px;
+    height : 50px;
+}
+
+/*
+    add dot flying as signal's symbol
+*/
+.leftTop{
+    width : 5px;
+    height : 5px;
+
+    animation : 1s lt alternate 2 linear;
+}
+
+@keyframes lt{
+    from{
+        position: absolute;
+        top : 20px;
+        left : 20px;
+    }
+    to{
+        position: absolute;
+        top : -30px;
+        left : -30px;
+    }
+}
+
+.rightTop{
+    width : 5px;
+    height : 5px;
+
+    animation : 1s rt alternate 2 linear;
+}
+
+@keyframes rt{
+    from{
+        position: absolute;
+        top : 20px;
+        right : 20px;
+    }
+    to{
+        position: absolute;
+        top : -30px;
+        right : -30px;
+    }
+}
+
+.leftBottom{
+    width : 5px;
+    height : 5px;
+
+    animation : 1s lb alternate 2 linear;
+}
+
+@keyframes lb{
+    from{
+        position: absolute;
+        bottom : 5px;
+        left : 20px;
+    }
+    to{
+        position: absolute;
+        bottom : -50px;
+        left : -30px;
+    }
+}
+
+.rightBottom{
+    width : 5px;
+    height : 5px;
+
+    animation : 1s rb alternate 2 linear;
+}
+
+@keyframes rb{
+    from{
+        position: absolute;
+        bottom : 5px;
+        right : 20px;
+    }
+    to{
+        position: absolute;
+        bottom : -50px;
+        right : -30px;
+    }
+}

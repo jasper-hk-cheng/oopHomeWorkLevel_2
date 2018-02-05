@@ -1,0 +1,36 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ credit cards and its inheritance diagram ~~
+
+interface creditCard{
+    {abstract} +getBankName()
+    {abstract} +getCardNo()
+}
+
+class taiShinCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+creditCard <|.. taiShinCreditCard
+
+class cathayCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+creditCard <|.. cathayCreditCard
+
+class ctbcCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+ctbcCreditCard ..|> creditCard
+
+class ncccCreditCard{
+    +getBankName()
+    +getCardNo()
+}
+ncccCreditCard ..|> creditCard
+
+@enduml
