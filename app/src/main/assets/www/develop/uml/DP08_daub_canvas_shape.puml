@@ -1,0 +1,54 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ shape class diagram ~~
+
+class shapeFactory{
+
+}
+circle <--* shapeFactory : generate shape <
+rectangle <--* shapeFactory : generate shape <
+line <--* shapeFactory : generate shape <
+
+abstract class shape{
+    -drawLib
+
+    +drawCircle(x, y, radius)
+    +drawLine(x1, y1, x2, y2)
+    {abstract} +display()
+}
+
+class circle{
+    - x
+    - y
+    -radius
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- circle : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+class rectangle{
+    -x1
+    -y1
+    -x2
+    -y2
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- rectangle : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+class line{
+    -x1
+    -y1
+    -x2
+    -y2
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- line : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+@enduml

@@ -1,0 +1,102 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ daub canvas class diagram summary ~~
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''
+
+class paramFactory{
+
+}
+circle .... paramFactory : generate param \n object to provide \n shape instantiation <
+rectangle .... paramFactory : generate param \n object to provide \n shape instantiation <
+line .... paramFactory : generate param \n object to provide \n shape instantiation <
+
+class shapeFactory{
+
+}
+circle <--* shapeFactory : generate shape <
+rectangle <--* shapeFactory : generate shape <
+line <--* shapeFactory : generate shape <
+
+abstract class shape{
+    -drawLib
+
+    +drawCircle(x, y, radius)
+    +drawLine(x1, y1, x2, y2)
+    {abstract} +display()
+}
+
+class circle{
+    - x
+    - y
+    -radius
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- circle : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+class rectangle{
+    -x1
+    -y1
+    -x2
+    -y2
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- rectangle : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+class line{
+    -x1
+    -y1
+    -x2
+    -y2
+
+    +display()
+    +multiDisplay()
+}
+shape <|-- line : direct the drawing \n with super class' \n drawLib and the \n drawing method <
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''
+
+class drawLibFactory{
+
+}
+drawLibFactory *----> drawLibV1
+drawLibFactory *----> drawLibV2
+
+abstract drawLib{
+    {abstract} +drawLine(x1, y1, x2, y2)
+    {abstract} +drawCircle(x, y, radius)
+}
+
+class drawLibV1{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLib <|-- drawLibV1 : implement abstract \n method with \n different library
+drawLibV1 <--o shape
+
+class drawLibV2{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLib <|-- drawLibV2 : implement abstract \n method with \n different library
+drawLibV2  <--o shape
+
+class GDIPlus{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLibV1 ..> GDIPlus : drive the \n library to \n draw
+
+class Win32API{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLibV2 ..> Win32API : drive the \n library to \n draw
+
+@enduml

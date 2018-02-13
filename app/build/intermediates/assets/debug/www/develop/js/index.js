@@ -6,9 +6,9 @@ $(window).on('load', function(){
         $('html').append(cordovaScriptTag);
 
         document.addEventListener('deviceready', cordovaDeviceReady, false);
-    }else{
-        cordovaDeviceReady();
     }
+
+//    cordovaDeviceReady();
 
     /*
         device ready callback setting...
@@ -20,7 +20,10 @@ $(window).on('load', function(){
         $('#lessonList').delegate('li.list-group-item', 'click', function(event){
 
             //get the lesson object to get all the data about the current lesson
-            var lessonId = $(event.target).closest('li.list-group-item').find('input[name="lessonId"]:hidden').val();
+
+//            var lessonId = $(event.target).closest('li.list-group-item').find('input[name="lessonId"]:hidden').val();
+
+            var lessonId = $(event.currentTarget).find('input[name="lessonId"]:hidden').val();
             var lessonObj = lessonUtils.content[lessonId];
 
             // set the iframe's url
@@ -79,8 +82,13 @@ $(window).on('load', function(){
             });
 
             // set the newly status
-            $(event.target).closest('li').addClass('active');
-            var hash = $(event.target).closest('li').children('a').prop('hash');
+
+//            $(event.target).closest('li').addClass('active');
+//            var hash = $(event.target).closest('li').children('a').prop('hash');
+
+            var theClickedLi = $(event.currentTarget);
+            theClickedLi.addClass('active');
+            var hash = theClickedLi.children('a').prop('hash');
             $(hash).show();
         });
 
@@ -90,7 +98,10 @@ $(window).on('load', function(){
         $('#umlList').delegate('li.list-group-item', 'click', function(event){
 
             //draw the uml on the specified canvas
-            var theClickedLi = $(event.target).closest('li.list-group-item');
+
+//            var theClickedLi = $(event.target).closest('li.list-group-item');
+
+            var theClickedLi = $(event.currentTarget);
             var umlLabel = theClickedLi.text();
             var fileUrl = theClickedLi.data(globalConstUtils.DATA_PROP_FILE_URL);
 

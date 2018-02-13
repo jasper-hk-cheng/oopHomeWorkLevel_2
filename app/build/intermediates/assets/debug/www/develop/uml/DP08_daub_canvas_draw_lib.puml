@@ -1,0 +1,42 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ drawing library class diagram ~~
+
+class drawLibFactory{
+
+}
+drawLibV1 <--* drawLibFactory : generate draw library <
+drawLibV2 <--* drawLibFactory : genetate draw library <
+
+abstract drawLib{
+    {abstract} +drawLine(x1, y1, x2, y2)
+    {abstract} +drawCircle(x, y, radius)
+}
+
+class drawLibV1{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLib <|-- drawLibV1 : implement abstract \n method with \n different library
+
+class drawLibV2{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLib <|-- drawLibV2 : implement abstract \n method with \n different library
+
+class GDIPlus{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+GDIPlus <. drawLibV1 : drive the \n library to \n draw
+
+class Win32API{
+    +drawLine(x1, y1, x2, y2)
+    +drawCircle(x, y, radius)
+}
+drawLibV2 .> Win32API : drive the \n library to \n draw
+
+@enduml

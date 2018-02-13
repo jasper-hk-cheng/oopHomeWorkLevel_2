@@ -2,7 +2,7 @@
 (function(root, initFunc){
     root.hammerUtils = initFunc(root.jQuery);
 
-    root.hammerUtils.bindUmlCanvasGesture($('#umlCanvas')[0]);
+    root.hammerUtils.bindUmlCanvasGesture();
 
 }(this, function($){
     var exports = {};
@@ -10,8 +10,8 @@
     exports.permanentObj = {};
     exports.permanentObj.umlCanvasHammerManager = undefined;
 
-    exports.bindUmlCanvasGesture = function(element){
-        exports.permanentObj.umlCanvasHammerManager = new Hammer.Manager(element, {});
+    exports.bindUmlCanvasGesture = function(){
+        exports.permanentObj.umlCanvasHammerManager = new Hammer.Manager($('#umlCanvas')[0], {});
 
         /*
             pinch
