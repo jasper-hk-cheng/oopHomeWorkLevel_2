@@ -1,0 +1,10 @@
+
+@import url(lessonCommonStyle.css);
+
+.flipClock{
+    margin: 12px 0px;
+}
+
+.clockLabel{
+    text-decoration: underline;
+}

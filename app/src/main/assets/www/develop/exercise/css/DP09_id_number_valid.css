@@ -1,0 +1,223 @@
+
+@import url(lessonCommonStyle.css);
+
+@media screen and (orientation: portrait){
+
+    .eachChar{
+        /*
+            vertical and horizontal center align
+        */
+        display: flex;
+        /*
+            flex-direction: column;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        line-height: 8vh;
+        /*
+            animation-name: spanTheChar;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        */
+        animation: spanTheChar 0.5s forwards;
+    }
+    @keyframes spanTheChar{
+        from{
+            /*
+                border-style: none;
+                border-width: 0;
+            */
+            border: 0 none black;
+
+            width: 0;
+            height: 0;
+        }
+        to{
+            /*
+                border-style: dashed;
+                border-width: 1px;
+                border-color: black;
+            */
+            border: 1px solid black;
+            border-radius: 15%;
+
+            font-size: 4vh;
+            font-weight: bold;
+            color: white;
+            background: black;
+
+            width: 7vw;
+            height: 7vh;
+        }
+    }
+
+    /*
+        pass the basic check
+    */
+    .isLegal{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        line-height: 8vh;
+
+        border-radius: 15%;
+
+        font-size: 4vh;
+        font-weight: bold;
+        color: white;
+        background: black;
+
+        width: 7vw;
+        height: 7vh;
+    }
+
+    /*
+        can not pass the basic check
+    */
+    .isIllegal{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        line-height: 8vh;
+
+        border: 1px solid black;
+        border-radius: 15%;
+
+        font-size: 4vh;
+        font-weight: bold;
+        color: white;
+        background: black;
+
+        width: 7vw;
+        height: 7vh;
+
+        animation: errorTwinkle both 2s infinite;
+    }
+    @keyframes errorTwinkle{
+        from{
+            color: white;
+            background: black;
+        }
+        50%{
+            color: black;
+            background: white;
+        }
+        to{
+            color: white;
+            background: black;
+        }
+    }
+
+    /*
+        process container
+    */
+    .process{
+        line-height: 4vh;
+
+        border-style: none none solid none;
+        border-width: 0;
+        border-color: #ddd;
+    }
+
+    /*
+        the char which moved to the below to be validated
+    */
+    .charToValid{
+        text-align: center;
+
+        font-size: 3vh;
+        font-weight: bold;
+
+        color: lightSteelBlue;
+    }
+    /*
+        the block to describe the processing of calculation
+    */
+    .processDetail{
+        display: none;
+
+        text-align: center;
+
+        font-size: 3vh;
+        font-weight: bold;
+
+        color: GoldenRod;
+    }
+    /*
+        the number to be amounted to check whether the total value is a multiple of 10 or not...
+    */
+    .calculateResult{
+        text-align: center;
+
+        font-size: 3vh;
+        font-weight: bold;
+
+        color: LightSeaGreen;
+    }
+
+
+
+    /*
+        the line which increased its length when the calculation was be accomplished.
+    */
+    .drawSeparateLine{
+        width: 0;
+        border: 0 solid orange;
+        float: left;
+
+        /*
+            animation-name: drawLine;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+        */
+        animation: drawLine 0.5s forwards;
+    }
+    @keyframes drawLine{
+        from{
+            width: 0;
+            border-width: 0;
+        }
+        10%{ width: 10%; border-width: 1px; }
+        20%{ width: 20%; border-width: 1px; }
+        30%{ width: 30%; border-width: 1px; }
+        40%{ width: 40%; border-width: 1px; }
+        50%{ width: 50%; border-width: 1px; }
+        60%{ width: 60%; border-width: 1px; }
+        70%{ width: 70%; border-width: 1px; }
+        80%{ width: 80%; border-width: 1px; }
+        90%{ width: 90%; border-width: 1px; }
+        to{
+            width: 100%;
+            border-width: 1px;
+        }
+    }
+
+
+
+    /*
+        summary
+    */
+    .total{
+        display: none;
+
+        font-size: 3vh;
+        font-weight: normal;
+    }
+
+    .summaryReport{
+        display: none;
+
+        font-size: 3vh;
+        font-weight: bold;
+
+        color: CadetBlue;
+    }
+}
+

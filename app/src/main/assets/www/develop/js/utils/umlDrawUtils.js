@@ -9,10 +9,10 @@
     exports.const.UML_DRAW_TARGET = '#umlCanvas';
     exports.const.MIME_TYPE = 'text/xml';
 
-    exports.drawWithFileUrl = function(umlLabel, fileName){
+    exports.drawWithFileName = function(umlLabel, fileName){
 
         // set the current uml label and file url in the header of the draw
-        $('#umlLabel').text(umlLabel).data(globalConstUtils.DATA_PROP_FILE_URL, fileName);
+        $('#umlLabel').text(umlLabel).data(globalConstUtils.DATA_PROP_FILE_NAME, fileName);
 
         exports.drawUmlWithPlantUml(fileName);
     }

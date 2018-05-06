@@ -27,9 +27,9 @@
     },
     {
         "lessonId": 3,
-        "imgSrc": "DP03/singleSpeaker.png",
+        "imgSrc": "DP03/singleBusinessMan.png",
         "title": "singleton",
-        "comment": "lonely singleton, endless sadness...",
+        "comment": "lonely singleton, endless work and sadness...",
         "hkUrl": "exercise/html/DP03_singleton.html",
         "umlList": [
             {
@@ -95,7 +95,7 @@
     },
     {
         "lessonId": 7,
-        "imgSrc": "DP07/betterMedal.png",
+        "imgSrc": "DP07/trophy.png",
         "title": "strategy",
         "comment": "the same algorithm, different implementation...",
         "hkUrl": "exercise/html/DP07_discount.html",
@@ -124,6 +124,71 @@
             {
                 "label": "daub canvas class diagram summary",
                 "fileName": "DP08_daub_canvas_summary.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 9,
+        "imgSrc": "DP09/idCard.png",
+        "title": "C.O.R",
+        "comment": "the more power, the more responsibility...",
+        "hkUrl": "exercise/html/DP09_id_number_valid.html",
+        "umlList": [
+            {
+                "label": "checker interface, abstract checker and its implemented class",
+                "fileName": "DP09_id_number_valid.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 10,
+        "imgSrc": "DP10/standing-left.png",
+        "title": "state",
+        "comment": "who will be the next ?? every body knows !!",
+        "hkUrl": "exercise/html/DP10_traffic_light.html",
+        "umlList": [
+            {
+                "label": "sign interface and its abstract class, implemented class",
+                "fileName": "DP10_traffic_light.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 11,
+        "imgSrc": "DP11/creditCardFullShot.png",
+        "title": "decorator",
+        "comment": "the next decorator will decorate the future better !!",
+        "hkUrl": "exercise/html/DP11_credit_card_decorator.html",
+        "umlList": [
+            {
+                "label": "decorator, price interface and its abstract class, implemented class",
+                "fileName": "DP11_credit_card_decorator.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 12,
+        "imgSrc": "DP12/creditCardBlack.png",
+        "title": "proxy",
+        "comment": "i am not the one but i can be delegated to do that !!",
+        "hkUrl": "exercise/html/DP12_credit_card_proxy.html",
+        "umlList": [
+            {
+                "label": "proxy(and its decorator), decorator, price interface and its abstract class, implemented class",
+                "fileName": "DP12_credit_card_proxy.puml"
+            }
+        ]
+    },
+    {
+        "lessonId": 13,
+        "imgSrc": "DP13/ec.png",
+        "title": "composite",
+        "comment": "use the same api in tree structure data !!",
+        "hkUrl": "exercise/html/DP13_price_check.html",
+        "umlList": [
+            {
+                "label": "composite pattern, only one interface for singleton or the container of the collection of something",
+                "fileName": "DP13_price_check.puml"
             }
         ]
     }

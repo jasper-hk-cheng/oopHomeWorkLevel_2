@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/DP09_id_number_valid.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="text" id="idNumber" name="idNumber" value="A125314202" class="form-control text-uppercase" />
+        </div>
+        <div class="col-xs-2">
+            <button type="button" id="btnStartCheck" class="btn btn-info btn-sm">check</button>
+        </div>
+        <div class="col-xs-offset-1 col-xs-2">
+            <button type="button" id="reset" class="btn btn-info btn-sm">reset</button>
+        </div>
+    </div>
+
+    <div id="basicCheck" class="row topMargin">
+        <div class="col-xs-offset-1 col-xs-1"><div class=""></div></div>
+
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+        <div class="col-xs-1"><div class=""></div></div>
+    </div>
+
+    <div id="transferChar00" class="col-xs-12 process topMargin">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 1 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar01" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 9 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar02" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 8 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar03" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 7 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar04" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 6 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar05" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 5 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar06" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 4 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar07" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 3 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar08" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 2 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar09" class="col-xs-12 process">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 1 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+    <div id="transferChar10" class="col-xs-12 process" style="border-style: none;">
+        <div class="col-xs-4 charToValid"></div>
+        <div class="col-xs-4 processDetail"> X 1 = </div>
+        <div class="col-xs-4 calculateResult"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="equivalentLine"/>
+        </div>
+    </div>
+
+    <!--separating line and result display block -->
+    <div class="col-xs-12 topMargin">
+        <div class="col-xs-5 pull-right">
+            <div class="total badge"></div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 topMargin">
+        <div class="summaryReport text-nowrap text-right"></div>
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/utils/oopUtils.js"></script>
+<script type="text/javascript" src="../js/DP09_id_number_valid.js"></script>
+
+</html>

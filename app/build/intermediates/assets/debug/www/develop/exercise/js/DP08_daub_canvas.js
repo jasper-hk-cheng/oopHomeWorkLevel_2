@@ -1,9 +1,17 @@
 
 $(window).on('load', function(){
+
     /*
-        canvas object
+        get the canvas object and set the canvas size(width and height)
     */
+    var canvasContainer = $('#myDaubCanvas').closest('div.row');
+    var canvasHeight = canvasContainer.height();
+    var canvasWidth = canvasContainer.width();
+    $('#myDaubCanvas').height(canvasHeight).width(canvasWidth);
+
     var myDaubCanvas = document.getElementById('myDaubCanvas');
+    myDaubCanvas.width = canvasWidth;
+    myDaubCanvas.height = canvasHeight;
 
     /*
         initial all the radio element

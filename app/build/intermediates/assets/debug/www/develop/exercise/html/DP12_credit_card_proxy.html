@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lib/icheck_minimal/green.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/DP12_credit_card_proxy.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="radio" id="name01" name="name" value="jasper" />
+            <label for="name01" class="control-label">Jasper</label>
+            <input type="radio" id="name02" name="name" value="somebody" />
+            <label for="name02" class="control-label">somebody</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label class="control-label">seniority:</label>
+
+            <input type="radio" id="y1" name="seniority" value="1" />
+            <label for="y1" class="control-label">1</label>
+
+            <input type="radio" id="y2" name="seniority" value="2" />
+            <label for="y2" class="control-label">2</label>
+
+            <input type="radio" id="y3" name="seniority" value="3" />
+            <label for="y3" class="control-label">3</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="checkbox" id="isDiscountDuration" name="isDiscountDuration" class="form-check-input" />
+            <label for="isDiscountDuration" class="control-label">isDiscountDuration</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="productTable" class="table text-center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="../../img/DP12/mBriefcase.png" />
+                            <div class="priceTag text-center">700</div>
+                        </td>
+                        <td>
+                            <img src="../../img/DP12/mShoe.png" />
+                            <div class="priceTag text-center">800</div>
+                        </td>
+                        <td>
+                            <img src="../../img/DP12/mWatch.png" />
+                            <div class="priceTag text-center">3000</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <button type="button" id="btnCalculate" class="btn btn-info btn-block">
+                <span class="glyphicon glyphicon-play-circle"></span>calculate
+            </button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" id="btnReset" class="btn btn-info btn-block">
+                <span class="glyphicon glyphicon-remove"></span>reset
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="creditCardContainer">
+                <div id="ctbcCard" class="creditCard">
+                    <img src="../../img/DP12/creditCard01Front.png" class="front" />
+                    <img src="../../img/DP12/creditCard01Back.png" class="back" />
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 priceDesc">
+            <div id="ctbcPayable" style="display:none;"></div>
+            <div id="ctbcComment" style="display:none;"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="creditCardContainer">
+                <div id="taiShinCard" class="creditCard">
+                    <img src="../../img/DP12/creditCard02Front.png" class="front" />
+                    <img src="../../img/DP12/creditCard02Back.png" class="back" />
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 priceDesc">
+            <div id="taiShinPayable" style="display:none;"></div>
+            <div id="taiShinComment" style="display:none;"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="creditCardContainer">
+                <div id="citiCard" class="creditCard">
+                    <img src="../../img/DP12/creditCard03Front.png" class="front" />
+                    <img src="../../img/DP12/creditCard03Back.png" class="back" />
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 priceDesc">
+            <div id="citiPayable" style="display:none;"></div>
+            <div id="citiComment" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/lib/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/utils/oopUtils.js"></script>
+<script type="text/javascript" src="../js/DP12_credit_card_proxy.js"></script>
+
+</html>

@@ -1,0 +1,41 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ checker interface, abstract checker and its implemented class ~~
+
+interface checkerInterface{
+    {abstract} +check(idNumber)
+    {abstract} +setNextChecker(checker)
+}
+
+abstract class abstractChecker{
+    +setNextChecker(checker);
+}
+checkerInterface <|-- abstractChecker: to implement the \n "setNextChecker" \n method only
+
+class leadingCharChecker{
+    -nextChecker
+
+    +check(idNumber)
+}
+abstractChecker <-- leadingCharChecker
+
+class numberChecker{
+    -nextChecker
+
+    +check(idNumber)
+}
+abstractChecker <-- numberChecker
+
+class numberValueChecker{
+    -nextChecker
+
+    +check(idNumber)
+}
+abstractChecker <-- numberValueChecker
+
+leadingCharChecker "1" o--> "1" numberChecker: take numberChecker \n as the next checker \n on the chain
+numberValueChecker "1" <--o "1" numberChecker: take numberValueChecker \n as the next checker \n on the chain
+
+@enduml

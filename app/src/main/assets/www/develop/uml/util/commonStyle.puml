@@ -4,6 +4,7 @@
 'skinparam handwritten true
 skinparam defaultFontName Georgia
 skinparam backgroundColor #FCFAF2/#FFFFFB
+'skinparam backgroundColor transparent
 
 skinparam class{
     backgroundColor #FFFFFB

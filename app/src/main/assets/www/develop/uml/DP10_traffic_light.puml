@@ -1,0 +1,48 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ sign interface and its abstract class, implemented class  ~~
+
+class signController{
+
+}
+
+interface signInterface{
+    + handle()
+    + getMessage()
+    + setNextSign()
+}
+signController o-> signInterface : initialize the \n controller's state
+
+abstract class abstractSign{
+    + setNextSign()
+}
+signInterface <|-- abstractSign : implements the common \n method setNextSign
+
+class redSign{
+    - nextSign
+
+    + getMessage()
+    + handle()
+}
+abstractSign <|.. redSign
+
+class yellowSign{
+    - nextSign
+
+    + getMessage()
+    + handle()
+}
+abstractSign <|.. yellowSign
+
+class greenSign{
+    - nextSign
+
+    + getMessage()
+    + handle()
+}
+abstractSign <|.. greenSign
+
+
+@enduml

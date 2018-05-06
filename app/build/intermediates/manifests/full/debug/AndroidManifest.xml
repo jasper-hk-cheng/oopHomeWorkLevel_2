@@ -6,7 +6,7 @@
     android:versionName="1.0.0" > <!-- xmlns:tools="http://schemas.android.com/tools" -->
     <uses-sdk
         android:minSdkVersion="23"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="25" />
 
     <supports-screens
         android:anyDensity="true"

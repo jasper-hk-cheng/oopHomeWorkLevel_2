@@ -1,74 +1,116 @@
 
-.bottomLeft{
-    width : 60px;
-    height : 60px;
+@import url(lessonCommonStyle.css);
 
-    position : absolute;
-    top : 10px;
+@media screen and (orientation: portrait){
 
-    left : 25%;
-    animation : 1s fallBottom forwards;
-}
+    .flexibleContainer{
+        height: 100%;
 
-.bottomRight{
-    width : 60px;
-    height : 60px;
+        display: flex;
+        /*
+            flex-direction: column;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
+    }
 
-    position : absolute;
-    top : 10px;
+    .flexibleButtons{
+        flex: initial;
+    }
 
-    left : 65%;
-    animation : 1s fallBottom forwards;
-}
+    .flexibleDeviceRegion{
+        flex: 1;
+    }
 
-.topLeft{
-    width : 60px;
-    height : 60px;
+    .deviceRegion{
+        height: 45%;
+        display: table;
+    }
 
-    position : absolute;
-    top : 10px;
+    .flexLine{
+        height: 5%;
+    }
 
-    left : 25%;
-    animation : 1s fallTop forwards;
-}
+    .introText{
+        display: table-cell;
+        vertical-align: middle;
 
-.topRight{
-    width : 60px;
-    height : 60px;
+        color: #ddd;
+    }
 
-    position : absolute;
-    top : 10px;
+    /* --- animation ---------------------- */
 
-    left : 65%;
-    animation : 1s fallTop forwards;
-}
+    .bottomLeft{
+        width : 20vw;
+        height : 20vw;
 
-@keyframes fallTop{
-    from{
+        position : absolute;
         top : 10px;
-    }
-    to{
-        display : block;
-        top : 20px;
-    }
-}
 
-@keyframes fallBottom{
-    from{
+        left : 20vw;
+        animation : 1s fallBottom forwards;
+    }
+
+    .bottomRight{
+        width : 20vw;
+        height : 20vw;
+
+        position : absolute;
         top : 10px;
+
+        left : 65vw;
+        animation : 1s fallBottom forwards;
     }
-    to{
-        top : 120px;
+
+    .topLeft{
+        width : 20vw;
+        height : 20vw;
+
+        position : absolute;
+        top : 10px;
+
+        left : 20vw;
+        animation : 1s fallTop forwards;
     }
-}
 
-.integrated{
-    display : none;
+    .topRight{
+        width : 20vw;
+        height : 20vw;
 
-    width : 160px;
-    height : 160px;
+        position : absolute;
+        top : 10px;
 
-    position : absolute;
-    top: 10px;
-    left: 30%;
+        left : 65vw;
+        animation : 1s fallTop forwards;
+    }
+
+    @keyframes fallTop{
+        from{
+            top : 10px;
+        }
+        to{
+            display : block;
+            top : 5vh;
+        }
+    }
+
+    @keyframes fallBottom{
+        from{
+            top : 10px;
+        }
+        to{
+            top : 25vh;
+        }
+    }
+
+    .integrated{
+        display : none;
+
+        width : 50vw;
+        height : 50vw;
+
+        position : absolute;
+        top: 20px;
+        left: 25vw;
+    }
 }

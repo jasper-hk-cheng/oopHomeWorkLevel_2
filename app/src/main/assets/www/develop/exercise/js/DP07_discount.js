@@ -34,7 +34,7 @@ $(window).on('load', function(){
                 results[eachStrategy.name] = result;
 
                 //log
-                eachStrategy.log('計算結果為 ' + result+' 元');
+                eachStrategy.log(result+' 元');
             }
 
             var minimumKey = '';
@@ -78,11 +78,11 @@ $(window).on('load', function(){
     }
 
     strategyInterface.prototype.showWinnerInfo = function(){
-        $('#' + this.name + 'Medal').css('animation-name', 'medal-fall').prop('src', '../../img/DP07/betterMedal.png');
+        $('#' + this.name + 'Log').css('animation-name', 'startBreath');
     }
 
     strategyInterface.prototype.log = function(text){
-        $('#' + this.name + 'Log').append(this.label + ': ' + text + '<br/>');
+        $('#' + this.name + 'Log').html(this.label + ': ' + text + '<br/>');
     }
 
     //rebateIn1000
@@ -152,7 +152,7 @@ $(window).on('load', function(){
         select the produce to purchase
     */
     $('#produceTable').delegate('img', 'click', function(event){
-        $(event.target).toggleClass('glow');
+        $(event.currentTarget).toggleClass('glow');
     });
 
     /*
@@ -160,30 +160,13 @@ $(window).on('load', function(){
     */
     $('#resetSelection').on('click', function(){
         $('#produceTable .glow').removeClass('glow');
-
-        $('img[id$="Medal"]').css('animation-name', '').prop('src', '');
-
-        $('div[id$="Log"]').each(function(index, element){
-            var alertDiv = $('<div class="alert alert-success">');
-
-            var id = $(element).prop('id');
-            if(id.startsWith('rebateIn1000')){
-                alertDiv.html('滿千送百');
-
-            }else if(id.startsWith('percent20')){
-                alertDiv.html('全面八折');
-            }
-            $(element).html(alertDiv);
-        });
+        clearLog();
     });
 
     /*
         start to calculate the total price
     */
     $('#calculatePrice').on('click', function(){
-
-        //clear the previous analysis record at the first
-        clearMedalAndLog();
 
         var jasper = new purchaser();
 
@@ -205,8 +188,18 @@ $(window).on('load', function(){
         jasper.analysis();
     });
 
-    function clearMedalAndLog(){
-        $('img[id$="Medal"]').css('animation-name', '').prop('src', '');
-        $('div[id$="Log"]').html('');
+    function clearLog(){
+
+        $('div[id$="Log"]').each(function(index, element){
+            var alertDiv = $('<div class="alert alert-success">');
+
+            var id = $(element).prop('id');
+            if(id.startsWith('rebateIn1000')){
+                alertDiv.html('滿千送百');
+            }else if(id.startsWith('percent20')){
+                alertDiv.html('一律八折');
+            }
+            $(element).html(alertDiv).css('animation-name', '');
+        });
     }
 });

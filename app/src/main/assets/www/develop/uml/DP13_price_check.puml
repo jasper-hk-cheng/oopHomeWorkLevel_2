@@ -1,0 +1,70 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ composite pattern, only one interface for singleton or the container of the collection of something ~~
+
+interface iPrice{
+    + getPrice()
+}
+
+class macBookPro{
+    - originPrice
+
+    + getPrice()
+}
+iPrice <|.. macBookPro
+
+class iParAir{
+    - originPrice
+
+    + getPrice()
+}
+iPrice <|.. iParAir
+
+class appleWatch{
+    - originPrice
+
+    + getPrice()
+}
+iPrice <|.. appleWatch
+
+class nintendoSwitch{
+    - originPrice
+
+    + getPrice()
+}
+iPrice <|.. nintendoSwitch
+
+class zelda{
+    - originPrice
+
+    + getPrice()
+}
+iPrice <|.. zelda
+
+class appleSeriesProduction{
+    - discountPercentage
+    - productList
+
+    + getPrice()
+}
+appleSeriesProduction ..|> iPrice: for having the \n same api for \n client's calling
+
+class nintendoSeriesProduction{
+    - discountPercentage
+    - productList
+
+    + getPrice()
+}
+nintendoSeriesProduction ..|> iPrice: for having the \n same api for \n client's calling
+
+class appleNintendoSeriesProduction{
+    - discountPercentage
+    - productList
+
+    + getPrice()
+}
+appleNintendoSeriesProduction ..|> iPrice: for having the \n same api for \n client's calling
+
+@enduml

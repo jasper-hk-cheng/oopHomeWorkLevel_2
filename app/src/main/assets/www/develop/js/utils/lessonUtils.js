@@ -16,9 +16,11 @@
                 // laod the main lesson list
                 var viewAdapter = {};
                 viewAdapter.diagramAmount = element.umlList.length;
-                viewAdapter.title = element.title;
                 viewAdapter.comment = element.comment;
                 viewAdapter.lessonId = element.lessonId;
+
+                var strLessonId = element.lessonId < 10 ? '0' + element.lessonId : element.lessonId;
+                viewAdapter.title = 'DP' + strLessonId + ' ' + element.title;
 
                 $('#lessonList').loadTemplate($('#lessonListTemplate'), viewAdapter, {
                     append: true,

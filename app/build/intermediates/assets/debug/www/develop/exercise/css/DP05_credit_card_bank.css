@@ -1,109 +1,137 @@
 
-.dotGroup > div{
-    background: #CA7A2C;
-    border-radius : 2.5px;
-}
+@import url(lessonCommonStyle.css);
 
-#creditModule > img{
-    width : 50px;
-    height : 50px;
-}
-#cathayBank > img{
-    width: 50px;
-    height: 50px;
-}
-#taishinBank > img{
-     width : 50px;
-     height : 50px;
-}
-#ctbcBank > img{
-    width : 50px;
-    height : 50px;
-}
-#nccc > img{
-    width : 50px;
-    height : 50px;
-}
+@media screen and (orientation: portrait){
 
-/*
-    add dot flying as signal's symbol
-*/
-.leftTop{
-    width : 5px;
-    height : 5px;
+    /*
+    .flexContainer{
+        height: 100%;
 
-    animation : 1s lt alternate 2 linear;
-}
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
 
-@keyframes lt{
-    from{
-        position: absolute;
-        top : 20px;
-        left : 20px;
+        flex-flow: column nowrap;
     }
-    to{
-        position: absolute;
-        top : -30px;
-        left : -30px;
+
+    .flexInitial{
+        flex: initial;
+    }
+
+    .flexRemain{
+        flex: 1;
+    }
+    */
+
+    /* ------------------------------ */
+
+    .dotGroup > div{
+        background: #CA7A2C;
+        border-radius : 50%;
+    }
+
+    #creditModule > img{
+        width : 20vw;
+        height : 20vw;
+    }
+    #cathayBank > img{
+        width: 20vw;
+        height: 20vw;
+    }
+    #taishinBank > img{
+         width : 20vw;
+         height : 20vw;
+    }
+    #ctbcBank > img{
+        width : 20vw;
+        height : 20vw;
+    }
+    #nccc > img{
+        width : 20vw;
+        height : 20vw;
+    }
+
+    /*
+        add dot flying as signal's symbol
+    */
+    .leftTop{
+        width : 5px;
+        height : 5px;
+
+        animation : 0.5s lt alternate 2 linear;
+    }
+
+    @keyframes lt{
+        from{
+            position: absolute;
+            top : 5vw;
+            left : 5vw;
+        }
+        to{
+            position: absolute;
+            top : -5vw;
+            left : -5vw;
+        }
+    }
+
+    .rightTop{
+        width : 5px;
+        height : 5px;
+
+        animation : 0.5s rt alternate 2 linear;
+    }
+
+    @keyframes rt{
+        from{
+            position: absolute;
+            top : 5vw;
+            right : 5vw;
+        }
+        to{
+            position: absolute;
+            top : -5vw;
+            right : -5vw;
+        }
+    }
+
+    .leftBottom{
+        width : 5px;
+        height : 5px;
+
+        animation : 0.5s lb alternate 2 linear;
+    }
+
+    @keyframes lb{
+        from{
+            position: absolute;
+            bottom : 5vw;
+            left : 5vw;
+        }
+        to{
+            position: absolute;
+            bottom : -5vw;
+            left : -5vw;
+        }
+    }
+
+    .rightBottom{
+        width : 5px;
+        height : 5px;
+
+        animation : 0.5s rb alternate 2 linear;
+    }
+
+    @keyframes rb{
+        from{
+            position: absolute;
+            bottom : 5vw;
+            right : 5vw;
+        }
+        to{
+            position: absolute;
+            bottom : -5vw;
+            right : -5vw;
+        }
     }
 }
 
-.rightTop{
-    width : 5px;
-    height : 5px;
-
-    animation : 1s rt alternate 2 linear;
-}
-
-@keyframes rt{
-    from{
-        position: absolute;
-        top : 20px;
-        right : 20px;
-    }
-    to{
-        position: absolute;
-        top : -30px;
-        right : -30px;
-    }
-}
-
-.leftBottom{
-    width : 5px;
-    height : 5px;
-
-    animation : 1s lb alternate 2 linear;
-}
-
-@keyframes lb{
-    from{
-        position: absolute;
-        bottom : 5px;
-        left : 20px;
-    }
-    to{
-        position: absolute;
-        bottom : -50px;
-        left : -30px;
-    }
-}
-
-.rightBottom{
-    width : 5px;
-    height : 5px;
-
-    animation : 1s rb alternate 2 linear;
-}
-
-@keyframes rb{
-    from{
-        position: absolute;
-        bottom : 5px;
-        right : 20px;
-    }
-    to{
-        position: absolute;
-        bottom : -50px;
-        right : -30px;
-    }
-}

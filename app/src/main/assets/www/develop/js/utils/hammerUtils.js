@@ -99,10 +99,10 @@
             }
 
             var nextActiveLi = umlList.children('li.list-group-item:eq('+ nextIndex +')');
-            var nextFileUrl = nextActiveLi.data(globalConstUtils.DATA_PROP_FILE_URL);
+            var nextFileName = nextActiveLi.data(globalConstUtils.DATA_PROP_FILE_NAME);
             var nextUmlLabel = nextActiveLi.text();
 
-            umlDrawUtils.drawWithFileUrl(nextUmlLabel, nextFileUrl);
+            umlDrawUtils.drawWithFileName(nextUmlLabel, nextFileName);
         });
     }
     return exports;

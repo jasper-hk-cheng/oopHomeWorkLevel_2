@@ -3,68 +3,73 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/lib/icheck_minimal/green.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/index.css"/>
     <link rel="stylesheet" type="text/css" href="../css/DP08_daub_canvas.css"/>
 </head>
 
 <body>
+<div class="container flexContainer">
 
-<div class="row text-center">
-    <div id="assistLine"></div>
-    <canvas id="myDaubCanvas" width="330" height="300"></canvas>
-    <!--style="border: 1px dashed orange;"-->
-</div>
+    <div class="row flexRemain">
+        <div id="assistLine"></div>
+        <canvas id="myDaubCanvas" class="canvas"></canvas>
+    </div>
 
-<hr class="separateLine"/>
-
-<div class="row">
-    <div class="col-xs-6">
-        <label class="control-label col-xs-12">select library:</label>
-
+    <div class="row flexInitial">
         <div class="col-xs-12">
-            <input type="radio" id="win32api" name="drawLib" value="win32api" checked/>
-            <label for="win32api">Win32API</label>
-        </div>
-
-        <div class="col-xs-12">
-            <input type="radio" id="gdiPlus" name="drawLib" value="gdiPlus"/>
-            <label for="gdiPlus">GDIPlus</label>
-        </div>
-
-        <div class="col-xs-12">
-            <button type="button" id="clearCanvas" class="btn btn-info btn-sm">clean canvas</button>
+            <hr class="separateLine"/>
         </div>
     </div>
-    <div class="col-xs-6">
-        <label class="control-label col-xs-12">select shape:</label>
 
-        <div class="col-xs-12">
-            <input type="radio" id="circle" name="shape" value="circle" checked/>
-            <label for="circle">circle</label>
+    <div class="row flexInitial">
+        <div class="col-xs-6">
+            <label class="control-label col-xs-12">select library:</label>
+
+            <div class="col-xs-12">
+                <input type="radio" id="win32api" name="drawLib" value="win32api" checked/>
+                <label for="win32api">Win32API</label>
+            </div>
+
+            <div class="col-xs-12">
+                <input type="radio" id="gdiPlus" name="drawLib" value="gdiPlus"/>
+                <label for="gdiPlus">GDIPlus</label>
+            </div>
+
+            <div class="col-xs-12">
+                <button type="button" id="clearCanvas" class="btn btn-info btn-sm">clean canvas</button>
+            </div>
         </div>
+        <div class="col-xs-6">
+            <label class="control-label col-xs-12">select shape:</label>
 
-        <div class="col-xs-12">
-            <input type="radio" id="rectangle" name="shape" value="rectangle"/>
-            <label for="rectangle">rectangle</label>
+            <div class="col-xs-12">
+                <input type="radio" id="circle" name="shape" value="circle" checked/>
+                <label for="circle">circle</label>
+            </div>
+
+            <div class="col-xs-12">
+                <input type="radio" id="rectangle" name="shape" value="rectangle"/>
+                <label for="rectangle">rectangle</label>
+            </div>
+
+            <div class="col-xs-12">
+                <input type="radio" id="drawText" name="shape" value="drawText"/>
+                <label for="drawText">text</label>
+            </div>
         </div>
+    </div>
 
-        <div class="col-xs-12">
-            <input type="radio" id="drawText" name="shape" value="drawText"/>
-            <label for="drawText">text</label>
+    <div class="row flexInitial">
+        <div class="col-xs-4">
+            <input type="number" id="printAmount" class="form-control attrField" placeholder="amount"/>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" id="printOffset" class="form-control attrField" placeholder="offset"/>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" id="fontWeight" class="form-control attrField" placeholder="weight"/>
         </div>
     </div>
-</div>
 
-<div class="row" style="margin-top:5px;">
-    <div class="col-xs-4">
-        <input type="number" id="printAmount" class="form-control" placeholder="amount"/>
-    </div>
-    <div class="col-xs-4">
-        <input type="number" id="printOffset" class="form-control" placeholder="offset"/>
-    </div>
-    <div class="col-xs-4">
-        <input type="number" id="fontWeight" class="form-control" placeholder="weight"/>
-    </div>
 </div>
 
 </body>

@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\oopWorkspaceLevel_2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "H:\\oopWorkspaceLevel_2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\016121\\.gradle\\caches\\transforms-1\\files-1.1\\design-23.4.0.aar\\3af9f7ee0da8b65c6f6224e81ff1700a\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\jasper\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\81ad85d2a5b27e327f7153784cc788ce\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,117,189,259,323,394",
+                        "endColumns": "61,71,69,63,70,67",
+                        "endOffsets": "112,184,254,318,389,457"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jasper\\.gradle\\caches\\transforms-1\\files-1.1\\design-23.4.0.aar\\83ee7b6f33c809168e62bcc379fa0f23\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,50 +30,6 @@
                         "endLines": "11",
                         "endColumns": "12",
                         "endOffsets": "639"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\016121\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\1488c48f7edf8444490c3938ea90a080\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,259,323,394",
-                        "endColumns": "61,71,69,63,70,67",
-                        "endOffsets": "112,184,254,318,389,457"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "F:\\oopWorkspaceLevel_2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\jasper\\.gradle\\caches\\transforms-1\\files-1.1\\design-23.4.0.aar\\b54d79e5f66006efa242c58877ec8271\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "232"
-                    },
-                    "to": {
-                        "startLines": "8",
-                        "startColumns": "4",
-                        "startOffsets": "462",
-                        "endLines": "11",
-                        "endColumns": "12",
-                        "endOffsets": "639"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jasper\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0dee09415ec43d6827cc017f33d3a137\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,259,323,394",
-                        "endColumns": "61,71,69,63,70,67",
-                        "endOffsets": "112,184,254,318,389,457"
                     }
                 }
             ]

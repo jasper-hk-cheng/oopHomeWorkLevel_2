@@ -1,0 +1,19 @@
+
+@media screen and (orientation: portrait){
+
+    html, body{
+        height: 100%;
+    }
+
+    /* hide the line when the screen keeps it landscape */
+    .separateLine{
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        border-width: 3px;
+        color: #ddd;
+    }
+
+    .topMargin{
+        margin-top: 2vh;
+    }
+}

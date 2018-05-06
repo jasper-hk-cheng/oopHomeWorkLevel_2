@@ -1,0 +1,77 @@
+
+
+@import url(lessonCommonStyle.css);
+
+@media screen and (orientation: portrait){
+    #productTable img{
+        width: 20vw;
+        height: 20vw;
+    }
+
+    #productTable > tbody{
+        background: #707C74;
+    }
+
+    .glow{
+        box-shadow: 0 0 5vw 1vw #FFFFFB;
+        border-radius: 15%;
+    }
+
+    .priceTag{
+        margin-top: 1vh;
+        line-height: 3vh;
+        color: #FFFFFB;
+        text-decoration: underline;
+    }
+
+    button > span{
+        margin: 0 4px;
+    }
+
+    .creditCardContainer{
+        width: 20vw;
+        height: 20vw;
+        perspective: 800px;
+    }
+
+    .creditCard{
+        width: 100%;
+        height: 100%;
+
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    /*
+        when we need to flip a card, add this class on that card element....
+    */
+    .flipped{
+        transform: rotateX(180deg);
+    }
+
+    .creditCard > img{
+        display: block;
+        position: absolute; /* why is the property necessary and be "absolute" either ?? */
+
+        height: 100%;
+        width: 100%;
+
+        backface-visibility: hidden;
+    }
+
+    .front{
+
+    }
+
+    .back{
+        transform: rotateX(180deg);
+    }
+
+    .priceDesc{
+        margin-top: 2vh;
+        text-decoration: underline;
+    }
+}
+
+
+

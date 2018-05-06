@@ -1,116 +1,166 @@
 
-.factory{
-    width : 50px;
-    height : 50px;
+@import url(lessonCommonStyle.css);
 
-    margin-top: 15px;
-}
+@media screen and (orientation: portrait){
 
-.production{
-    animation-duration : 1s;
-    animation-fill-mode : forwards;
+    .flexContainer{
+        height: 100%;
 
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-@keyframes toTopLeft{
-    from{
-        width : 5px;
-        height: 5px;
+        display: flex;
+        /*
+            flex-direction: column;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
     }
-    to{
+
+    .flexInitial{
+        flex: initial;
+    }
+
+    .flexRemain{
+        flex: 1;
+    }
+
+    .prodPlant{
+        height: 50%;
+    }
+
+    .factory{
+        width : 25vw;
+        height : 25vw;
+
+        margin-top: 15px;
+    }
+
+    /*
+        suite label and description
+    */
+
+    /* position */
+
+    .topSuiteDesc{
+        /* mapping the size of suite image should be 10vw either... */
+        padding-top: 25vw;
+    }
+
+    .topSuiteDesc > div{
+        margin-left: 20vw;
+        white-space: nowrap;
+    }
+
+    .bottomSuiteDesc{
+        /* mapping the size of suite image should be 10vw either... */
+        margin-top: 25vw;
+    }
+
+    .bottomSuiteDesc > div{
+        margin-left: 10%;
+        white-space: nowrap;
+    }
+
+    /* size and color */
+
+    .suiteName{
+        font-size: 3vw;
+        color: #28a745;
+        text-decoration: underline;
+    }
+
+    .suiteSpec{
+        font-size: 3vw;
+        color: #6c757d;
+        margin-bottom: 1vw;
+        line-height: 5vw;
+    }
+
+    /* ---------------------------- */
+
+    .production{
+        animation-duration : 0.5s;
+        animation-fill-mode : forwards;
+
         position: absolute;
-        top: 30px;
-        left: 15%;
+        left: 0;
+        top: 0;
+    }
 
-        width : 40px;
-        height: 40px;
+
+
+    @keyframes toTopLeft{
+        from{
+            width : 0vw;
+            height: 0vw;
+        }
+        to{
+            position: absolute;
+            top: 10vw;
+            left: 20vw;
+
+            width : 20vw;
+            height: 20vw;
+        }
+    }
+
+    @keyframes toTopRight{
+        from{
+            width : 0vw;
+            height: 0vw;
+        }
+        to{
+            position: absolute;
+            top: 10vw;
+            left: 60vw;
+
+            width : 20vw;
+            height: 20vw;
+        }
+    }
+
+    @keyframes toBottomLeft{
+        from{
+            width : 0vw;
+            height: 0vw;
+        }
+        to{
+            position: absolute;
+            top: 10vw;
+            left: 10%;
+
+            width : 20vw;
+            height: 20vw;
+        }
+    }
+
+    @keyframes toBottomMiddle{
+        from{
+            width : 2vw;
+            height: 2vw;
+        }
+        to{
+            position: absolute;
+            top: 10vw;
+            left: 40%;
+
+            width : 20vw;
+            height: 20vw;
+        }
+    }
+
+    @keyframes toBottomRight{
+        from{
+            width : 2vw;
+            height: 2vw;
+        }
+        to{
+            position: absolute;
+            top: 10vw;
+            left: 70%;
+
+            width : 20vw;
+            height: 20vw;
+        }
     }
 }
 
-@keyframes toTopRight{
-    from{
-        width : 5px;
-        height: 5px;
-    }
-    to{
-        position: absolute;
-        top: 30px;
-        left: 50%;
 
-        width : 40px;
-        height: 40px;
-    }
-}
-
-@keyframes toBottomLeft{
-    from{
-        width : 5px;
-        height: 5px;
-    }
-    to{
-        position: absolute;
-        top: 30px;
-        left: 0%;
-
-        width : 40px;
-        height: 40px;
-    }
-}
-
-@keyframes toBottomMiddle{
-    from{
-        width : 5px;
-        height: 5px;
-    }
-    to{
-        position: absolute;
-        top: 30px;
-        left: 40%;
-
-        width : 40px;
-        height: 40px;
-    }
-}
-
-@keyframes toBottomRight{
-    from{
-        width : 5px;
-        height: 5px;
-    }
-    to{
-        position: absolute;
-        top: 30px;
-        left: 75%;
-
-        width : 40px;
-        height: 40px;
-    }
-}
-
-.topLabelAdjust{
-    position: relative;
-    top: 70px;
-    left: -5%;
-}
-
-.bottomLabelAdjust{
-    position: relative;
-    top: 70px;
-    left: 0%;
-}
-
-.suite-name-label{
-    font-size: 90%;
-    color: #28a745;
-    text-decoration: underline;
-}
-
-.suite-label{
-    font-size: 75%;
-    color: #6c757d;
-    margin-bottom: 1px;
-    line-height: 10px;
-}

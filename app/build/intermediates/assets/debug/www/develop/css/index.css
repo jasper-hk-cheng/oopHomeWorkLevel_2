@@ -1,71 +1,150 @@
 
-.topMargin{
-    margin-top:15px;
+/*
+    media query syntax......
+
+    @import url(normal-layout.css) screen and (min-width: 641px);
+    @import url(mobile-layout.css) screen and (max-width: 640px);
+
+@media not|only mediatype and (media feature and|or|not media feature) {
+    CSS-Code;
 }
 
-.separateLine{
-    margin-top:1px;
-    margin-bottom:5px;
-    border-width:3px;
-    color:#ddd;
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+example:
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+
+*/
+
+/*
+    hide the too long text and add ellipsis (......) style
+
+    style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"
+*/
+
+/*
+    element for specified function
+*/
+#backToLessonList{
+
+    /*
+        add the topMargin at the element instead of the declaration margin-top here!!
+        margin-top: 2vh;
+    */
+    margin-bottom: 0;
+
+    padding: 10px 10px;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #CA7A2C;
+
+    /*
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ddd;
+    */
+    border: 1px solid #ddd;
 }
 
-.plant50{
-    height: 50px;
-}
+/*
+    phone
+*/
+@media screen and (orientation: portrait){
 
-.plant75{
-    height: 75px;
-}
+    /*
+        common scale and mark
+    */
+    .topMargin{
+        margin-top: 2vh;
+    }
 
-.plant100{
-    height: 100px;
-}
+    /*
+        flexible page1 (lesson list template) setting here ~
+    */
+    .flexiblePage1Template{
+        display: flex;
+        /*
+            flex-direction: row;
+            flex-wrap: nowrap;
+        */
+        flex-flow: row nowrap;
+    }
 
-.plant125{
-    height: 125px;
-}
+    /* icon */
 
-.plant150{
-    height: 150px;
-}
+    .titleIcon{
+        flex: 5;
+    }
 
-.plant175{
-    height: 175px;
-}
+    .imgStyle{
+        width: 20vw;
+        height: 20vw;
+    }
 
-.plant200{
-    height: 200px;
-}
+    /* title */
 
-.plant225{
-    height: 225px;
-}
+    .titleText{
+        flex: 12;
+    }
 
-.plant250{
-    height: 250px;
-}
+    .lessonListTitle{
+        margin-top: 7px;
+        margin-left: 7px;
 
-.plant275{
-    height: 275px;
-}
+        font-weight: bolder;
+        font-size: 15px;
+        text-decoration: underline;
+    }
 
-.plant300{
-    height: 300px;
-}
+    .lessonListContent{
+        margin-top: 7px;
+        margin-left: 7px;
 
-.plant325{
-    height: 325px;
-}
+        font-size: 12px;
+    }
 
-.plant350{
-    height: 350px;
-}
+    /* badge */
 
-.plant375{
-    height: 375px;
-}
+    .titleBadge{
+        flex: 1;
+    }
 
-.plant400{
-    height: 400px;
+    .badgeStyle{
+        background: #F19483;
+        font-size: 12px;
+    }
+
+    /*
+        flexible page2 (navBar and animationAndUmlDiagram) setting here ~
+    */
+
+    .flexiblePage2{
+        display: flex;
+        /*
+            flex-direction: column;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
+
+        height: 100%;
+    }
+
+    .navBar{
+        flex: initial;
+    }
+
+    .animationAndUmlDiagram{
+        flex: 1;
+    }
+
+    .exercise{
+        padding-top: 2vh;
+
+        height: 100%;
+        width: 100%;
+        border: 0px dashed orange;
+        overflow: auto;
+    }
 }

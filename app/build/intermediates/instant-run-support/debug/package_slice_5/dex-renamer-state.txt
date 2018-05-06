@@ -1,4 +1,0 @@
-#Mon Feb 12 22:37:09 CST 2018
-base.0=F\:\\oopWorkspaceLevel_2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
-path.0=classes.dex
-renamed.0=classes.dex

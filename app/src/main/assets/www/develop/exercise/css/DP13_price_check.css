@@ -1,0 +1,75 @@
+
+@import url(lessonCommonStyle.css);
+
+@media screen and (orientation: portrait){
+
+    #scanner{
+        width: 30vw;
+        height: 30vw;　
+    }
+
+    #scanRegion{
+        height: 15vw;
+        width: 15vw;
+
+        position: relative;
+        top: -5vh;
+        left: 5vw;
+
+        /*
+            add red laser line effect
+        */
+    }
+
+    #productTable{
+        margin-top: 1vh;
+    }
+
+    #productTable img{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    #productTable > tbody{
+        background: #707C74;
+    }
+
+    .priceTag{
+        margin-top: 1vh;
+        line-height: 3vh;
+        color: #FFFFFB;
+        text-decoration: underline;
+    }
+
+    .glow{
+        box-shadow: 0 0 5vw 1vw #FFFFFB;
+        border-radius: 15%;
+    }
+
+    .productGroup{
+        color: #FFFFFB;
+        text-decoration: underline;
+    }
+
+    .messageBlock{
+        height: 25vh;
+        border: 1px solid #787878;
+        border-radius: 5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #89916B;
+    }
+
+    .onScan{
+        /*
+            border-style: solid;
+            border-width: 1px;
+            border-color: red;
+        */
+        border: 1px solid red;
+        border-radius: 10%;
+    }
+}

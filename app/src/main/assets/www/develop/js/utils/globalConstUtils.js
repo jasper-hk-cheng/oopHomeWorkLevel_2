@@ -5,7 +5,7 @@
 })(this, function($){
     var exports = {};
 
-    exports.DATA_PROP_FILE_URL = 'file-url';
+    exports.DATA_PROP_FILE_NAME = 'file-name';
 
     return exports;
 });

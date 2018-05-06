@@ -1,0 +1,113 @@
+@startuml
+
+!include util/commonStyle.puml !commonStyle
+
+caption ~~ proxy, price interface and its abstract class, implemented class ~~
+
+interface priceInterface{
+    + calculatePrice()
+}
+
+interface decoratorInterface{
+    + decorate()
+}
+
+abstract class abstractDecorator{
+    + presentOption
+
+    + calculatePrice()
+    + decorate()
+}
+priceInterface <|.... abstractDecorator: for \n calculate \n price
+decoratorInterface <|.... abstractDecorator: for \n decorate \n decorator
+
+class originPriceProvider{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- originPriceProvider
+
+class rebateDecorator{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- rebateDecorator
+
+class discountDecorator{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- discountDecorator
+
+class getOneMoreDecorator{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- getOneMoreDecorator
+
+class couponDecorator{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- couponDecorator
+
+class rewardDecorator{
+    + calculatePrice()
+    + decorate()
+}
+abstractDecorator <|-- rewardDecorator
+
+
+
+interface memberInterface{
+    + isMatchMemberCondition()
+}
+
+abstract abstractMemberDecorator{
+    + isMatchMemberCondition()
+    + decorate()
+}
+memberInterface <|.... abstractMemberDecorator
+decoratorInterface <|.... abstractMemberDecorator
+
+class baseMemberDecorator{
+    + isMatchMemberCondition()
+}
+baseMemberDecorator -|> abstractMemberDecorator
+
+class memberSeniorityDecorator{
+    + isMatchMemberCondition()
+}
+abstractMemberDecorator <|-- memberSeniorityDecorator
+
+class isDiscountDurationDecorator{
+    + isMatchMemberCondition()
+}
+abstractMemberDecorator <|- isDiscountDurationDecorator
+
+
+
+class discountProxy{
+    - member
+    + calculatePrice()
+    + decorate()
+}
+discountProxy --|> abstractDecorator
+
+class couponProxy{
+    - member
+    + calculatePrice()
+    + decorate()
+}
+couponProxy --|> abstractDecorator
+
+class getOneMoreProxy{
+    - member
+    + calculatePrice()
+    + decorate()
+}
+getOneMoreProxy --|> abstractDecorator
+
+
+
+@enduml

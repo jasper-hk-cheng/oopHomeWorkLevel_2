@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../../css/lib/jquery-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
     <link rel="stylesheet" type="text/css" href="../css/DP04_computer_builder.css" />
 </head>
+
 <body>
 
-<div class="container">
+<div class="container flexibleContainer">
 
-    <div class="row topMargin">
+    <div class="row flexibleButtons">
         <div class="col-xs-6">
             <button type="button" id="buildComputer01" class="btn btn-info btn-block">computer 01</button>
         </div>
@@ -20,10 +19,18 @@
         </div>
     </div>
 
-    <hr class="separateLine" />
+    <div class="row flexibleDeviceRegion">
 
-    <div class="row plant200">
-        <div class="col-xs-12 ">
+        <div class="col-xs-12 flexLine">
+            <hr class="separateLine" />
+        </div>
+
+        <div class="col-xs-12 deviceRegion">
+            <div class="text-center introText">
+                build computer 01 here !!
+            </div>
+
+            <!--animation-->
             <div id="deviceGroup01">
                 <img id="desktop01" />
                 <img id="keyboard01" />
@@ -34,12 +41,17 @@
                 <img id="computer01" class="integrated" />
             </div>
         </div>
-    </div>
 
-    <hr class="separateLine" />
+        <div class="col-xs-12 flexLine">
+            <hr class="separateLine" />
+        </div>
 
-    <div class="row plant200">
-        <div class="col-xs-12">
+        <div class="col-xs-12 deviceRegion">
+            <div class="text-center introText">
+                build computer 02 here !!
+            </div>
+
+            <!--animation-->
             <div id="deviceGroup02">
                 <img id="desktop02" />
                 <img id="keyboard02" />
@@ -50,7 +62,9 @@
                 <img id="computer02" class="integrated" />
             </div>
         </div>
+
     </div>
+
 </div>
 
 </body>

@@ -3,57 +3,54 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/DP06_abstract_suite_factory.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
 </head>
 <body>
 
-<div class="container">
+<div class="container flexContainer">
 
-    <div class="row topMargin">
-        <div class="row">
-            <div class="col-xs-6">
-                <button type="button" id="startPokemon" class="btn btn-info btn-block">pokemon factory</button>
-            </div>
-            <div class="col-xs-6">
-                <button type="button" id="startWarCraft" class="btn btn-info btn-block">war craft factory</button>
-            </div>
+    <div class="row flexInitial">
+        <div class="col-xs-6">
+            <button type="button" id="startPokemon" class="btn btn-info btn-block">pokemon factory</button>
         </div>
-        <div class="row">
-            <div class="col-xs-6 text-center">
-                <img id="pokemonFactory" src="../../img/DP06/pokemonFactory.png" class="factory"/>
-            </div>
-            <div class="col-xs-6 text-center">
-                <img id="warCraftFactory" src="../../img/DP06/warCraftFactory.png" class="factory"/>
-            </div>
+        <div class="col-xs-6">
+            <button type="button" id="startWarCraft" class="btn btn-info btn-block">war craft factory</button>
         </div>
     </div>
 
-    <hr class="separateLine" />
+    <div class="row flexInitial">
+        <div class="col-xs-6 text-center">
+            <img id="pokemonFactory" src="../../img/DP06/pokemonFactory.png" class="factory"/>
+        </div>
+        <div class="col-xs-6 text-center">
+            <img id="warCraftFactory" src="../../img/DP06/warCraftFactory.png" class="factory"/>
+        </div>
+    </div>
 
-    <div class="row plant150">
-        <div class="col-xs-12">
+    <div class="row flexRemain">
+
+        <div class="col-xs-12 prodPlant">
+            <hr class="separateLine" />
+
             <!--hat and helmet (pokemon)-->
             <img id="pokemonHat" class="production"/>
-            <img id="pokemonHelmet" class="production"/>
+            <img id="warCraftHat" class="production"/>
 
             <!--hat and helmet (warCraft)-->
-            <img id="warCraftHat" class="production"/>
+            <img id="pokemonHelmet" class="production"/>
             <img id="warCraftHelmet" class="production"/>
-        </div>
-        <div class="row">
-            <div id="toTopLeft" class="col-xs-offset-2 col-xs-4 topLabelAdjust">
+
+            <!--topSuiteDesc-->
+            <div id="toTopLeft" class="col-xs-6 row topSuiteDesc">
 
             </div>
-            <div id="toTopRight" class="col-xs-4 topLabelAdjust">
+            <div id="toTopRight" class="col-xs-6 row topSuiteDesc">
 
             </div>
         </div>
-    </div>
 
-    <hr class="separateLine" />
+        <div class="col-xs-12 prodPlant">
+            <hr class="separateLine" />
 
-    <div class="row plant150">
-        <div class="col-xs-12">
             <!--armor boot and weapon (pokemon)-->
             <img id="pokemonArmor" class="production"/>
             <img id="pokemonBoot" class="production"/>
@@ -63,15 +60,15 @@
             <img id="warCraftArmor" class="production"/>
             <img id="warCraftBoot" class="production"/>
             <img id="warCraftWeapon" class="production"/>
-        </div>
-        <div class="row">
-            <div id="toBottomLeft" class="col-xs-4 bottomLabelAdjust">
+
+            <!--bottomSuiteDesc-->
+            <div id="toBottomLeft" class="col-xs-4 bottomSuiteDesc">
 
             </div>
-            <div id="toBottomMiddle" class="col-xs-4 bottomLabelAdjust">
+            <div id="toBottomMiddle" class="col-xs-4 bottomSuiteDesc">
 
             </div>
-            <div id="toBottomRight" class="col-xs-4 bottomLabelAdjust">
+            <div id="toBottomRight" class="col-xs-4 bottomSuiteDesc">
 
             </div>
         </div>

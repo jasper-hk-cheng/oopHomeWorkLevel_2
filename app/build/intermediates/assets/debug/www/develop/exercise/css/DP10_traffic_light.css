@@ -1,0 +1,222 @@
+
+@import url(lessonCommonStyle.css);
+
+@media screen and (orientation: portrait){
+
+    .lampHolderContainer{
+        width: 66vw;
+        height: 12vh;
+    }
+
+    .lampHolder{
+        width: 66vw;
+        height: 12vh;
+        background: #ddd;
+        border: 1px dotted #ddd;
+        border-radius: 6vh;
+
+        position: absolute;
+        top: 6vh;
+        left: 16vw;
+    }
+
+    .red{
+        background: red;
+        background-image: radial-gradient(#FB966E, transparent); /* example: (brown, transparent) */
+        background-size: 3px 3px;
+
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        border: 2px dotted red;
+
+        position: absolute;
+        left: 18vw;
+        top: 7vh;
+
+        /*
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+
+            animation-direction: alternate;
+            animation-iteration-count: 2;
+
+            animation-name: turnOverRed;
+        */
+        animation: 2s turnOverRed 2 alternate ease-in-out;
+
+        /*
+            usage unknown
+            box-shadow: 0 0 20px #111 inset, 0 0 10px yellow;
+        */
+    }
+
+    @keyframes turnOverRed{
+        from{opacity: 0}
+        3%{opacity: 0.25}
+        6%{opacity: 0.5}
+        9%{opacity: 0.75}
+        12%{opacity: 1}
+        to{opacity: 1}
+    }
+
+    .yellow{
+        background: yellow;
+        background-image: radial-gradient(#FFBA84, transparent); /* example: (orange, transparent) */
+        background-size: 3px 3px;
+
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        border: 2px dotted yellow;
+
+        position: absolute;
+        left: 42vw;
+        top: 7vh;
+
+        /*
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+
+            animation-name: turnOverYellow;
+        */
+        animation: 2s turnOverYellow 2 alternate ease-in-out;
+    }
+
+    @keyframes turnOverYellow{
+        from{opacity: 0}
+        3%{opacity: 0.25}
+        6%{opacity: 0.5}
+        9%{opacity: 0.75}
+        12%{opacity: 1}
+        to{opacity: 1}
+    }
+
+    .green{
+        background: green;
+        background-image: radial-gradient(#BEC23F, transparent); /* example: (lime, transparent) */
+        background-size: 3px 3px;
+
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        border: 2px dotted green;
+
+        position: absolute;
+        left: 66vw;
+        top: 7vh;
+
+        /*
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+
+            animation-name: turnOverGreen;
+        */
+        animation: 2s turnOverGreen 2 alternate ease-in-out;
+    }
+
+    @keyframes turnOverGreen{
+        from{opacity: 0}
+        3%{opacity: 0.25}
+        6%{opacity: 0.5}
+        9%{opacity: 0.75}
+        12%{opacity: 1}
+        to{opacity: 1}
+    }
+
+    /*
+        walking man animation
+    */
+    .walkingManRight{
+        background-image: url(../../img/DP10/standing-right.png);
+    }
+
+    .walkToRight{
+        background-image: url(../../img/DP10/walk-right.png);
+
+        /*
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step(6, end);
+
+            animation-name: walkRight;
+        */
+        animation: walkRight 1s steps(6, end) infinite;
+    }
+
+    @keyframes walkRight{
+        from{
+            background-position: 0;
+        }
+        to{
+            background-position: -612px;
+        }
+    }
+
+    .walkingManLeft{
+        background-image: url(../../img/DP10/standing-left.png);
+    }
+
+    .walkToLeft{
+        background-image: url(../../img/DP10/walk-left.png);
+
+        /*
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: step(6, end);
+
+            animation-name: walkLeft;
+        */
+        animation: walkLeft 1s steps(6, end) infinite;
+    }
+
+    @keyframes walkLeft{
+        from{
+            background-position: 0;
+        }
+        to{
+            background-position: -612px;
+        }
+    }
+
+    #walkingMan{
+        width: 102px;
+        height: 148px;
+    }
+
+    .flexContainer{
+        height: 100%;
+
+        display: flex;
+
+        /*
+            flex-direction: column;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
+    }
+
+    .flexInitial{
+        flex: initial;
+    }
+
+    .flexRemain{
+        flex: 1;
+    }
+
+    .perfectCenter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bottomButton{
+        margin-bottom: 2vh;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/DP10_traffic_light.css" />
+</head>
+
+<body>
+
+<div class="container flexContainer">
+    <div class="row flexInitial">
+        <div class="col-xs-6">
+            <button type="button" id="turnOnSign" class="btn btn-info btn-block">ON</button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" id="turnOffSign" class="btn btn-block">OFF</button>
+        </div>
+    </div>
+    <div class="row flexInitial">
+        <div class="col-xs-12 lampHolderContainer">
+            <div class="lampHolder"></div>
+            <div id="redLight"></div>
+            <div id="yellowLight"></div>
+            <div id="greenLight"></div>
+        </div>
+    </div>
+    <div class="row flexRemain perfectCenter">
+        <div class="col-xs-4">
+            <div id="walkingMan" class="walkingManRight"></div>
+        </div>
+    </div>
+    <div class="row flexInitial bottomButton">
+        <div class="col-xs-4">
+            <button type="button" id="btnGoLeft" class="btn btn-primary btn-block">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </div>
+        <div class="col-xs-4">
+            <button type="button" id="btnStop" class="btn btn-warning btn-block">
+                <span class="glyphicon glyphicon-stop"></span>
+            </button>
+        </div>
+        <div class="col-xs-4">
+            <button type="button" id="btnGoRight" class="btn btn-primary btn-block">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../js/lib/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/utils/oopUtils.js"></script>
+<script type="text/javascript" src="../js/DP10_traffic_light.js"></script>
+
+</html>

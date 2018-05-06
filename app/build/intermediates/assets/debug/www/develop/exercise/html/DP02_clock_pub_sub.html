@@ -3,22 +3,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../../css/lib/flipclock.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
 
     <title>ch2 observer pattern pub/sub [clock]</title>
-    <style>
-        .flipClock{
-            margin: 12px 0px;
-
-        }
-        .clockLabel{
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
+
 <div class="container">
-    <div class="row topMargin">
+
+    <div class="row">
         <div class="col-xs-6">
             <button type="button" id="startCounting" class="btn btn-info btn-block">start</button>
         </div>
@@ -26,6 +18,7 @@
             <button type="button" id="stopCounting" class="btn btn-info btn-block">stop</button>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xs-12 text-left">
             <label for="subjectClock" class="control-label text-capitalize clockLabel text-warning">subject clock</label>
@@ -60,6 +53,7 @@
             <div id="the2nd2sSub" class="flipClock"></div>
         </div>
     </div>
+
 </div>
 
 </body>

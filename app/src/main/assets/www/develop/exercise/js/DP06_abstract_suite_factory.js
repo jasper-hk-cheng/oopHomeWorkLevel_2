@@ -25,7 +25,7 @@
         exports.suiteStorage[id] = suiteObject;
 
         //trigger the animation
-        $('#' + id).css('animation-name', suiteObject.animationName).prop('src', '../../img/DP06/'+ id +'.png');
+        $('#' + id).prop('src', '../../img/DP06/'+ id +'.png').css('animation-name', suiteObject.animationName);
     }
 
     exports.bindAnimationEndEvent = function(id){
@@ -36,14 +36,12 @@
             var descArray = suiteObject.createDesc();
             $.each(descArray, function(index, element){
 
-                element.prop('for', id);
-                if(!$(element).hasClass('suite-name-label')){
-                    element.addClass('text-left text-nowrap suite-label');
-                }
-                element.css('display', 'none');
-
                 $('#' + suiteObject.animationName).append(element);
 
+                // hide immediately
+                element.css('display', 'none');
+
+                // show later
                 setTimeout(function(){
                     $(element).fadeIn(100, 'swing');
                 }, index * 100);
@@ -204,10 +202,10 @@ $(window).on('load', function(){
     pokemonHat.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var defenseLabel =  $('<label>').text('defense : ' + this.defense);
+        var defenseLabel =  $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -226,10 +224,10 @@ $(window).on('load', function(){
     pokemonHelmet.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -249,13 +247,13 @@ $(window).on('load', function(){
     pokemonArmor.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var thickLabel = $('<label>').text('thick : ' + this.thick);
+        var thickLabel = $('<div class="suiteSpec">').text('thick : ' + this.thick);
         labelArray.push(thickLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -274,10 +272,10 @@ $(window).on('load', function(){
     pokemonBoot.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var speedLabel = $('<label>').text('speed : ' + this.speed);
+        var speedLabel = $('<div class="suiteSpec">').text('speed : ' + this.speed);
         labelArray.push(speedLabel);
 
         return labelArray;
@@ -298,16 +296,16 @@ $(window).on('load', function(){
     pokemonWeapon.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var speedLabel = $('<label>').text('speed : ' + this.speed);
+        var speedLabel = $('<div class="suiteSpec">').text('speed : ' + this.speed);
         labelArray.push(speedLabel);
 
-        var attackLabel = $('<label>').text('attack : ' + this.attack);
+        var attackLabel = $('<div class="suiteSpec">').text('attack : ' + this.attack);
         labelArray.push(attackLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -330,10 +328,10 @@ $(window).on('load', function(){
     warCraftHat.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(''+this.name);
+        var nameLabel = $('<div class="suiteName">').text(''+this.name);
         labelArray.push(nameLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -352,10 +350,10 @@ $(window).on('load', function(){
     warCraftHelmet.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -375,13 +373,13 @@ $(window).on('load', function(){
     warCraftArmor.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var thickLabel = $('<label>').text('thick : ' + this.thick);
+        var thickLabel = $('<div class="suiteSpec">').text('thick : ' + this.thick);
         labelArray.push(thickLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;
@@ -400,10 +398,10 @@ $(window).on('load', function(){
     warCraftBoot.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var speedLabel = $('<label>').text('speed : ' + this.speed);
+        var speedLabel = $('<div class="suiteSpec">').text('speed : ' + this.speed);
         labelArray.push(speedLabel);
 
         return labelArray;
@@ -424,16 +422,16 @@ $(window).on('load', function(){
     warCraftWeapon.prototype.createDesc = function(){
         var labelArray = [];
 
-        var nameLabel = $('<label class="suite-name-label">').text(this.name);
+        var nameLabel = $('<div class="suiteName">').text(this.name);
         labelArray.push(nameLabel);
 
-        var speedLabel = $('<label>').text('speed : ' + this.speed);
+        var speedLabel = $('<div class="suiteSpec">').text('speed : ' + this.speed);
         labelArray.push(speedLabel);
 
-        var attackLabel = $('<label>').text('attack : ' + this.attack);
+        var attackLabel = $('<div class="suiteSpec">').text('attack : ' + this.attack);
         labelArray.push(attackLabel);
 
-        var defenseLabel = $('<label>').text('defense : ' + this.defense);
+        var defenseLabel = $('<div class="suiteSpec">').text('defense : ' + this.defense);
         labelArray.push(defenseLabel);
 
         return labelArray;

@@ -1,0 +1,37 @@
+
+@import url(lessonCommonStyle.css);
+
+@media screen and (orientation: portrait){
+
+    .canvas{
+    /*
+        border: 1px dashed orange;
+    */
+    }
+
+    .flexContainer{
+        height: 100%;
+
+        display: flex;
+        /*
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+        */
+        flex-flow: column nowrap;
+
+        justify-content: center;
+    }
+
+    .flexInitial{
+        flex: initial;
+    }
+
+    .flexRemain{
+        flex: 1;
+    }
+
+    .attrField{
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+}
